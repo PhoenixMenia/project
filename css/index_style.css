@@ -1,0 +1,40 @@
+/*index---style*/
+
+html {overflow-y:scroll;}
+body {margin:0; padding:0; font:12px/1.5 \5b8b\4f53,Arial,sans-serif;/*background:#ffffff;*/}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p{padding:0; margin:0;}
+table,td,tr,th{font-size:12px;}
+ol,ul {list-style:none;}
+li{list-style-type:none;}
+img{vertical-align:top;border:0;}
+h1,h2,h3,h4,h5,h6{font-size:inherit; font-weight:normal;}
+a{font-size:12px ;color: #777;text-decoration: none;}
+input{border:0;}
+
+
+/*========================main========================*/
+#main{width: 1210px;height: 1000px;margin:0 auto;background:red;}
+#banner-wrap{width: 983px;height:306px;padding: 11px 0 0 227px;background: yellow;position: relative;}
+
+.banner{width: 712px;height:304px;float: left;border: 1px solid #fdad6d;position: relative;overflow: hidden;}
+.banner img{width: 712px;height: 304px;position: absolute;left: 0;top: 0;display: block;}
+.banner p{position: absolute;right: -1px;bottom: 0;z-index: 100;}
+.banner p span{display: inline-block;width: 22px;height: 13px;background: #575455;line-height: 13px;text-align: center;color: #fff;border-right: 1px solid #fff;}
+
+.right_ads{width: 262px;height:306px;float: right;}
+.right_ads table{border-collapse: collapse;}
+.right_ads table td{width: 86px;height: 89px;border: 1px solid #ebebeb;vertical-align: bottom;text-align: center;background: url(../imgs/index/mianyunfei.jpg) no-repeat center top;color: #a2a2a2;}
+.right_ads table td:nth-child(2){background-image:url(../imgs/index/hdfk.jpg);}
+.right_ads table td:nth-child(3){background-image:url(../imgs/index/zp.jpg);}
+.right_ads h2{width: 249px;height: 31px;border:1px solid #ebebeb;background: #f5f5f5;line-height: 31px;color: #000;padding-left: 11px;font-weight: bold;}
+.right_ads h2 a{float: right;padding-right: 8px;font-size: 12px;color: #ee2b3e;}
+.right_ads ul{height: 75px;border:1px solid #ebebeb;border-top: 0;padding-top: 2px;}
+.right_ads ul li{padding-left: 19px;height: 25px;line-height: 25px;font-size: 12px;color: #000;position: relative;}
+.right_ads ul li span{display: inline-block;width: 2px; height:2px; background:#ef2b3f;position: absolute;left: 8px;top: 12px;}
+.right_ads p{width: 262px;height: 89px;padding-top: 10px;}
+.right_ads p img{width: 262px;height: 89px;display: block;}
+
+/*side_bar  sub_nav 通过绝对定位实现*/
+.side_bar{width:219px;height: 364px;background: #e84848;position: absolute;left: 0;top: -48px;z-index: 1000; }
+.side_bar_li li{width: 100%;height: 42px;line-height: 42px;text-align: center;}
+.side_bar_li li.li_tit{height: 44px;line-height: 44px;}
