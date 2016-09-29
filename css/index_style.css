@@ -65,17 +65,27 @@ input{border:0;}
 .details .right h3{height: 37px;line-height: 37px;padding-top:10px;font-weight: bold;color: #453037;}
 .details .right li{height: 30px;line-height: 30px;color: #000;}
 
-.contents{width: 100%;height: 327px;border-bottom:1px solid #ccc;color: #a68989;}
+.contents{width: 100%;height: 327px;border-bottom:1px solid #ccc;color: #a68989;overflow: hidd}
 .pic_con{width: 235px;height: 327px;float: left;}
-.pic_con h2{width: 100%;height: 37px;border-bottom: 1px solid #cecece;line-height: 37px;text-align: center;font-size: 14px;}
+.pic_con h2{width: 100%;height: 37px;border-bottom: 1px solid #cecece;line-height: 37px;text-align: center;font-size: 14px;font-weight: bold;}
+.pic_con h2:hover{color: #f00;border-color: #f00;}
 .prod_imgs{width:100% ;height: 289px;}
-.prod_imgs dt{height: 224px;text-align: center;vertical-align: middle;}
-.prod_imgs dt img{width: }
+.prod_imgs dt{height: 224px;text-align: center;position: relative;}
+.prod_imgs dt img{width: 215px;height: 215px;position: absolute;left:0;right:0;top: 0;bottom: 0;margin: auto;}
+.prod_imgs dt img:hover{border:1px solid #cecece;}
 .prod_imgs dd{height: 65px;padding: 0 32px 0 20px;}
 .prod_imgs dd a{line-height: 20px;}
 .prod_imgs dd a:hover{text-decoration: underline;}
 .prod_imgs dd span{display: block;height: 25px;line-height: 25px;color: #f00;font-weight: bold;}
-.pic_con_r{width: 260px;height: 288px;background: red;float: right;}
-.pic_con_r li{height: 71px;}
+/*.pic_con_r{width: 260px;height: 327px;background: red;float: right;}
+.pic_con_r li{height: 71px;}*/
+
+.content_r{width: 262px;height: 327px;float: right;}
+.content_r p{width: 100%;height: 36px;border-bottom: 2px solid #cecece;line-height: 36px;text-align: center;font-size: 14px;color: #878787;}
+.content_r p span{padding-right: 10px;float: right;font-size: 12px;}
+.pic_con_r{width: 250px;height: 287px;border:1px solid #878787;border-top: 0;padding: 0 5px;border-bottom: 2px solid #cecece;}
+.pic_con_r li{width: 100%;height: 70px;border-bottom: 1px dotted #cecece;}
+.pic_con_r li img{height: 70px;width: 125px;float: left;display: block;}
+.pic_con_r li.border0{border:0;}
 
 
