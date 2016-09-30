@@ -46,6 +46,7 @@ input{border:0;}
 .nav li a{float: left;height: 45px;line-height: 45px;color: #000;margin-right: 40px;font-weight: bold;}
 .nav li a:hover{color: #e70012}
 .side_img{width: 162px;height: 34px;margin-top:4px;float: left;position: relative;overflow: hidden;}
+.img_box{width: 162px;position: absolute;left: 0;top: 0;}
 .side_img img{width: 134px;height: 34px;display: block;}
 .side_img span{display: inline-block;width: 6px;height: 3px;position: absolute;right: 6px;background: url(../imgs/index/prev.jpg);}
 .side_img span.prev{top: 12px;}
