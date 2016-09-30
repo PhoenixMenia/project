@@ -100,5 +100,32 @@ $(function(){
 		}
 		onOff = !onOff;
 	});
+
+	/*===========side_img切换=========*/
+	var $side_imgs = $('.side_img img'),
+		imgHeight = $side_imgs.eq(0).height();
+		len = $side_imgs.length - 2,
+		index = 0;
+		timer = null;
+	$('.side_img').scrollTop(index*imgHeight);
+	timer = setInterval(function(){
+		$('.side_img').animate({'scrollTop':index*imgHeight},200);
+		index++;
+		if(index > 3){
+			index = 0;
+		$('.side_img').scrollTop(0);
+		}
+	},1000);
+
+
+
+	/*===========zbout us切换=========*/
+	$('#infos').on('click',function(){
+		$('#aboutus').show(300);
+	});
+	$('#hide').on('click',function(){
+		$('#aboutus').hide(300);
+	});
+
 	
 });

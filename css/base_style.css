@@ -45,7 +45,8 @@ input{border:0;}
 .nav li{float: left;}
 .nav li a{float: left;height: 45px;line-height: 45px;color: #000;margin-right: 40px;font-weight: bold;}
 .nav li a:hover{color: #e70012}
-.side_img{width: 162px;height: 34px;margin-top:4px;float: left;position: relative;}
+.side_img{width: 162px;height: 34px;margin-top:4px;float: left;position: relative;overflow: hidden;}
+.side_img img{width: 134px;height: 34px;display: block;}
 .side_img span{display: inline-block;width: 6px;height: 3px;position: absolute;right: 6px;background: url(../imgs/index/prev.jpg);}
 .side_img span.prev{top: 12px;}
 .side_img span.next{top: 25px;background-image: url(../imgs/index/next.jpg);}

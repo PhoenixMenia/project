@@ -42,7 +42,9 @@ input{border:0;}
 .side_bar{width:219px;background: #e84848;position: absolute;left: 0;top: -48px; color: #fff;font-size: 14px;}
 .side_bar_li{z-index: 1000;}
 .side_bar_li li{width: 100%;height: 39px;line-height: 39px;text-align: center;border-bottom: 1px dashed #f27676;}
-.side_bar_li li:hover{background: #fff;color: #e70012;}
+.side_bar_li li a{color: #fff;font-size: 14px;}
+.side_bar_li li:hover{background: #fff;}
+.side_bar_li li:hover a{color: #e70012;text-decoration: none;}
 .side_bar_li li.li_tit{height: 45px;line-height: 45px;font-size: 18px;background: #e70012;border:0;}
 .side_bar_li li.li_tit:hover{background:#e70012;color: #fff; }
 .side_bar_li li span{float: right;font-size: 5px;padding-right: 25px;}
@@ -140,3 +142,9 @@ input{border:0;}
 #investigate{width: 17px;height: 82px;padding-top: 15px;border:1px solid #cdcdcd;position: fixed;right: 10px;bottom: 20px;border-radius: 4px;text-align: center;cursor: pointer;background: url(../imgs/123.jpg) no-repeat center 7px;}
 #investigate a{color: #878787;}
 #investigate a:hover{text-decoration: none;}
+
+/* 关于我们 */
+#infos{width: 40px;height: 40px;background: url(../imgs/index/lala.jpg) no-repeat center;position: absolute;right: 0;top: 80px;border:1px solid #ddd; border-radius: 25% 0 0 25%;z-index: 500}
+#aboutus{width: 222px;height: 249px;background: red;border:1px solid #cecece;position: fixed;right: 0px;top: 80px;z-index: 1000;display: none;}
+#aboutus>p{height: 30px;background: #bd1918;width: 220px;border:1px solid #862e2a;line-height: 30px;color: #fff;background: #bc1a15 url(../imgs/index/liu.jpg) no-repeat 14px center;}
+#aboutus>p span{float: right;padding-right: 26px;font-weight: bold;background: url(../imgs/index/piu.jpg) no-repeat 30px center;}
