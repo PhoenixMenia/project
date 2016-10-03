@@ -11,7 +11,7 @@ a:hover{text-decoration: underline;}
 input{border:0;}
 
 
-#main{width: 1210px;height: 1000px;margin: 0 auto;}
+#main{width: 1210px;margin: 0 auto;}
 
 /*banner*/
 .top{height:33px;padding-left: 8px;line-height: 33px;}
