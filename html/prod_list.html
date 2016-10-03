@@ -2,9 +2,182 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>世纪中一商城</title>
+	<link rel="stylesheet" type="text/css" href="../css/base_style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/prod_list.css" />
+	<script src="../js/jquery/jquery-1.12.4.js"></script>
+	<script src="../js/prod_details.js"></script>
 </head>
+
+
 <body>
-	
+<!-- header -->
+<div id="header">
+	<div class="header_top">
+		<div class="ht_wrap">
+			<a href="#">收藏中一办公</a>
+			<p>
+				<span>你好，欢迎来到中一办公！</span>
+				<span>
+					<a href="#" class="font_red" style="border-left: 0;">请登录</a>
+					<a href="#" class="font_red">免费注册</a>
+					<a href="#">我的订单</a>
+					<a href="#" class="right_bg">我的中一</a>
+					<a href="#" class="right_bg">帮助中心</a>
+					<a href="#">在线客服</a>
+					<a href="#" style="border-right: 0;">010-67266572</a>
+				</span>
+			</p>
+		</div>
+	</div>
+	<div class="header_middle">
+		<h1 id="logo"><img src="../imgs/index/logo.jpg" alt="中一办公" title="logo"></h1>
+		<div class="search_area">
+			<div>
+				<input type="text" placeholder="请输入产品或商家" id="searh_txt" />
+				<input type="button" id="searh_btn"/>
+			</div>
+			<p>热门搜索： <a href="#">硒鼓</a><a href="#">墨盒</a><a href="#">白纸</a><a href="#">复印纸</a></p>
+		</div>
+		<div class="cart_link">
+			<a href="html/cart.html">去购物车结算</a>
+			<span>0</span>
+		</div>
+	</div>
+	<div class="header_bottom">
+		<ul class="nav">
+			<li><a href="#">首 页</a></li>
+			<li><a href="#">品牌专区</a></li>
+			<li><a href="#">优惠特价</a></li>
+			<li><a href="#">积分兑换</a></li>
+			<li><a href="#">快速订单</a></li>
+		</ul>
+		<div class="side_img">
+			<div class="img_box">
+				<img src="../imgs/index/side_img1.jpg" alt="124" />
+				<img src="../imgs/index/side_img2.jpg" alt="124" />
+				<img src="../imgs/index/side_img3.jpg" alt="124" />
+			</div>
+			<span class="prev" id="prev"></span><span class="next" id="next"></span>
+		</div>
+	</div>
+</div>
+<!-- =========================header END========================== -->
+
+<div id="main">
+	<div id="banner">
+		<div class="top"><a href="../index.html">首页</a><span>&gt;</span><a href="#">生活日用</a></div>
+		<div class="banner_area">
+			<div id="sidebar">
+				<div class="prod_classes">
+					<h3>小家电</h3>
+					<a href="#">电水壶</a><a href="#">饮水机</a><br /><a href="#">微波炉</a><a href="#">电风扇</a><br /><a href="#">吸尘器</a>
+					<div>
+						<h3>小家电</h3>
+						<a href="#">电水壶</a><a href="#">饮水机</a><a href="#">微波炉</a><a href="#">电风扇</a><a href="#">吸尘器</a>
+					</div>
+				</div>
+				<div class="prod_classes">
+					<h3>日常用品</h3>
+					<a href="#">电池/充电器</a><a href="#">钟表</a><br /><a href="#">锁具/钥匙/圈/扣/箱</a><a href="#">投诉意见箱</a><a href="#">小拉车/梯子/货架</a>
+					<div>
+						<h3>日常用品</h3>
+						<a href="#">电池/充电器</a><a href="#">钟表</a><a href="#">锁具/钥匙/圈/扣/箱</a><a href="#">投诉意见箱</a><a href="#">小拉车/梯子/货架</a>
+					</div>
+				</div>
+				<div class="prod_classes">
+					<h3>清洁用品</h3>
+					<a href="#">厨卫清洁</a><a href="#">衣物洗涤</a><br /><a href="#">香皂/洗手液</a><a href="#">个人洗护</a><br /><a href="#">清洁用具</a><a href="#">清洁用具</a>
+					<div>
+						<h3>清洁用品</h3>
+						<a href="#">厨卫清洁</a><a href="#">衣物洗涤</a><a href="#">香皂/洗手液</a><a href="#">个人洗护</a><a href="#">清洁用具</a><a href="#">家居护理</a>
+					</div>
+				</div>
+				<div class="prod_classes">
+					<h3>小家电</h3>
+					<a href="#">电水壶</a><a href="#">饮水机</a><br /><a href="#">微波炉</a><a href="#">电风扇</a><br /><a href="#">吸尘器</a>
+					<div>
+						<h3>小家电</h3>
+						<a href="#">电水壶</a><a href="#">饮水机</a><a href="#">微波炉</a><a href="#">电风扇</a><a href="#">吸尘器</a>
+					</div>
+				</div>
+				<div class="prod_classes">
+					<h3>小家电</h3>
+					<a href="#">电水壶</a><a href="#">饮水机</a><br /><a href="#">微波炉</a><a href="#">电风扇</a><br /><a href="#">吸尘器</a>
+					<div>
+						<h3>小家电</h3>
+						<a href="#">电水壶</a><a href="#">饮水机</a><a href="#">微波炉</a><a href="#">电风扇</a><a href="#">吸尘器</a>
+					</div>
+				</div>
+			</div>
+			<div id="subnav">
+				<h2></h2>
+				<ul class="item_list">
+					<li><a href="#">办公用纸/打印耗材</a><span>></span></li>
+					<li><a href="#">办公文具</a><span>></span></li>
+					<li><a href="#">办公设备</a><span>></span></li>
+					<li><a href="#">电脑/通讯/数码</a><span>></span></li>
+					<li><a href="#">生活日用</a><span>></span></li>
+					<li><a href="#">办公家居</a><span>></span></li>
+					<li><a href="#">体育/美术用品</a><span>></span></li>
+					<li><a href="#">礼品定制</a><span>></span></li>
+				</ul>
+			</div>
+			<div class="banner_wrap"></div>
+			<div class="ads"></div>
+		</div>
+	</div>
+</div>
+
+
+<!-- =========================main END========================== -->
+
+
+<!-- footer -->
+<div id="footer">
+	<div class="ft_links">
+		<ul class="links">
+			<li class="link_tit">购物指南<span></span></li>
+			<li><a href="#">新用户注册</a></li>
+			<li><a href="#">购物流程</a></li>
+			<li><a href="#">订单查询</a></li>
+			<li><a href="#">常见购物问题</a></li>
+		</ul>
+		<ul class="links">
+			<li class="link_tit">订单支付<span></span></li>
+			<li><a href="#">货到付款</a></li>
+			<li><a href="#">在线支付</a></li>
+			<li><a href="#">如何办理退款</a></li>
+			<li><a href="#">发票制度</a></li>
+		</ul>
+		<ul class="links">
+			<li class="link_tit">订单配送<span></span></li>
+			<li><a href="#">配送费用</a></li>
+			<li><a href="#">配送时间和范围</a></li>
+			<li><a href="#">配送常见问题</a></li>
+			<li><a href="#">配送方式</a></li>
+		</ul>
+		<ul class="links">
+			<li class="link_tit">售后服务<span></span></li>
+			<li><a href="#">缺货处理</a></li>
+			<li><a href="#">退换货政策</a></li>
+			<li><a href="#">退换货流程</a></li>
+			<li><a href="#">练习客服</a></li>
+		</ul>
+		<ul class="links">
+			<li class="link_tit">帮助中心<span></span></li>
+			<li><a href="#">关于我们</a></li>
+			<li><a href="#">积分兑换</a></li>
+			<li><a href="#">建议返回</a></li>
+			<li><a href="#">正品保证</a></li>
+		</ul>
+		
+	</div>
+	<div class="ft_copyright">
+		Copyright&copy;2016北京中一文艺商贸有限公司 All Right Reserved备案号：京ICP备14012128号<br />
+		世纪中一（zy100）专业办公用品采购平台,低价正品,假一罚十,货到付款,免费退换货. 专注于为客户提供各类办公用品、办公设备、耗材、文具、复印纸、日用品, 定制服务、数码产品。
+	</div>
+</div>
+
 </body>
 </html>
