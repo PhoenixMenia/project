@@ -37,7 +37,7 @@ $(function(){
 	
 	// timer = setInterval(fadeInOut,3000);
 	$spans.each(function(index,element){
-		$(this).on('click',function(){
+		$(this).on('mouseover',function(){
 			nextIndex = index;
 			fadeInOut();
 		});
