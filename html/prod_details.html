@@ -2,9 +2,575 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Coffee</title>
+	<link rel="stylesheet" href="../css/base_style.css" />
+	<link rel="stylesheet" href="../css/prod_details.css" />
+	<script src="../js/jquery/jquery-1.12.4.js"></script>
+	<script src="../js/base.js"></script>
+	<script src="../js/prod_details.js"></script>
 </head>
 <body>
+<div id="header">
+	<div class="header_top">
+		<div class="ht_wrap">
+			<a href="#">收藏中一办公</a>
+			<p>
+				<span>你好，欢迎来到中一办公！</span>
+				<span>
+					<a href="#" class="font_red" style="border-left: 0;">请登录</a>
+					<a href="#" class="font_red">免费注册</a>
+					<a href="#">我的订单</a>
+					<a href="#" class="right_bg">我的中一</a>
+					<a href="#" class="right_bg">帮助中心</a>
+					<a href="#">在线客服</a>
+					<a href="#" style="border-right: 0;">010-67266572</a>
+				</span>
+			</p>
+		</div>
+	</div>
+	<div class="header_middle">
+		<h1 id="logo"><img src="../imgs/index/logo.jpg" alt="中一办公" title="logo"></h1>
+		<div class="search_area">
+			<div>
+				<input type="text" placeholder="请输入产品或商家" id="searh_txt" />
+				<input type="button" id="searh_btn"/>
+			</div>
+			<p>热门搜索： <a href="#">硒鼓</a><a href="#">墨盒</a><a href="#">白纸</a><a href="#">复印纸</a></p>
+		</div>
+		<div class="cart_link">
+			<a href="html/cart.html">去购物车结算</a>
+			<span>0</span>
+		</div>
+	</div>
+	<div class="header_bottom">
+		<ul class="nav">
+			<li><a href="#">首 页</a></li>
+			<li><a href="#">品牌专区</a></li>
+			<li><a href="#">优惠特价</a></li>
+			<li><a href="#">积分兑换</a></li>
+			<li><a href="#">快速订单</a></li>
+		</ul>
+		<div class="side_img">
+			<div class="img_box">
+				<img src="../imgs/index/side_img1.jpg" alt="124" />
+				<img src="../imgs/index/side_img2.jpg" alt="124" />
+				<img src="../imgs/index/side_img3.jpg" alt="124" />
+			</div>
+			<span class="prev" id="prev"></span><span class="next" id="next"></span>
+		</div>
+	</div>
+</div>
+<!-- =========================header END========================== -->
+
+<!-- 侧边栏 sidebar -->
+<div id="sidebar">
+	<div id="subnav">
+		<h2></h2>
+		<ul class="item_list">
+			<li><a href="#">办公用纸/打印耗材</a><span>></span></li>
+			<li><a href="#">办公文具</a><span>></span></li>
+			<li><a href="#">办公设备</a><span>></span></li>
+			<li><a href="#">电脑/通讯/数码</a><span>></span></li>
+			<li><a href="#">生活日用</a><span>></span></li>
+			<li><a href="#">办公家居</a><span>></span></li>
+			<li><a href="#">体育/美术用品</a><span>></span></li>
+			<li><a href="#">礼品定制</a><span>></span></li>
+		</ul>
+		<div class="details" id="details1">
+			<div class="left">
+				<div class="fenlei">
+					<span >办公用纸</span>
+					<p><a href="#">复印纸</a><a href="#">传真纸</a><a href="#">电脑打印纸</a><a href="#">彩喷纸相片纸</a><a href="#">标贴打印纸</a><a href="#">收银纸/标价纸</a><a href="#">彩色复印纸</a><a href="#">绘图纸</a><a href="#">工程纸</a><a href="#">草图纸/硫酸纸</a><a href="#">銅版紙/白卡紙</a><a href="#">彩激紙</a></p>
+				</div>
+				<div class="fenlei">
+					<span>墨盒</span>
+					<p><a href="#">惠普(HP)墨盒</a><a href="#">佳能(Canon)墨盒</a><a href="#">愛普生(EPSON)墨盒</a><a href="#">兄弟(brother)墨盒</a><a href="#">三星(SAMSUNG)墨盒</a></p>
+				</div>
+				<div class="fenlei"> 
+					<span>硒鼓</span>
+					<p><a href="#">惠普(HP)硒鼓</a><a href="#">佳能(Canon)硒鼓</a><a href="#">愛普生(EPSON)硒鼓</a><a href="#">三星(SAMSUNG)硒鼓</a><a href="#">兄弟(brother)硒鼓</a><a href="#">联想(Lenovo)硒鼓</a>松下(Panasonic)硒鼓</a><a href="#">富士施樂(Fuji Xerox)硒鼓</a><a href="#">其它品牌 硒鼓</a></p>
+				</div>
+				<div class="fenlei">
+					<span>墨粉</span>
+					<p><a href="#">兄弟(brother)墨粉</a><a href="#">聯想(LENOVO)硒鼓</a><a href="#">佳能(Canon)墨粉</a><a href="#">夏普(Sharp)墨粉</a><a href="#">東芝(Toshiba)墨粉</a><a href="#">松下(Panasonic)墨粉</a><a href="#">富士施樂(Fuji Xerox)墨粉</a><a href="#">理光(RICOH)</a><a href="#">柯尼卡美能達(kyocera)墨粉</a><a href="#">京瓷(Kyocera)墨粉</a><a href="#">三星(SAMSUNG)墨粉</a></p>
+				</div>
+				<div class="fenlei"> 
+					<span>色带/磁带</span>
+					<p><a href="#">愛普生(EPSON)色帶</a><a href="#">傳真機磁帶</a><a href="#">標籤機色帶</a></p>
+				</div>
+			</div>>
+			<div class="right">
+				<h3>推荐品牌</h3>
+				<ul>
+					<li><a href="#">鑫乐</a></li>
+					<li><a href="#">高品乐</a></li>
+					<li><a href="#">百旺</a></li>
+					<li><a href="#">旗舰</a></li>
+					<li><a href="#">Doublea A</a></li>
+					<li><a href="#">加印</a></li>
+					<li><a href="#">童丽来</a></li>
+					<li><a href="#">联想(Lenovo)</a></li>
+					<li><a href="#">松下</a></li>
+					<li><a href="#">富士施乐</a></li>
+					<li><a href="#">夏普</a></li>
+					<li><a href="#">东芝</a></li>
+					<li><a href="#">理光(Ricoh)</a></li>
+					<li><a href="#">京瓷(Kyocera)</a></li>
+					<li><a href="#">卡西欧</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="details" id="details2">
+			<div class="left">
+				<div class="fenlei">
+					<span >书写工具</span>
+					<p><a href="#">签字笔</a><a href="#">圆珠笔/台笔</a><a href="#">笔芯</a><a href="#">记号笔</a><a href="#">白板笔</a><a href="#">荧光笔</a><a href="#">油漆笔/麦克笔</a><a href="#">铅笔/自动铅笔/铅芯</a><a href="#">绘图笔</a><a href="#">粉笔</a><a href="#">墨水/墨汁</a><a href="#">毛笔</a><a href="#">手笔</a><a href="#">笔袋</a><a href="#">水彩笔/油画棒</a></p>
+				</div>
+				<div class="fenlei">
+					<span>文件存储</span>
+					<p><a href="#">资料袋</a><a href="#">文件夹</a><a href="#">空性文件夹</a><a href="#">档案盒</a><a href="#">档案快劳夹</a><a href="#">文件袋/文件套</a><a href="#">11孔文件保护袋</a><a href="#">抽干夹</a><a href="#">旋转夹/报告夹</a><a href="#">电脑夹/票据夹</a><a href="#">写字板夹</a><a href="#">事物包/风琴包</a><a href="#">吊挂快劳及附件</a><a href="#">分类索引</a><a href="#">纸质文件夹/盒</a></p>
+				</div>
+				<div class="fenlei"> 
+					<span>桌面用品</span>
+					<p><a href="#">计算器</a><a href="#">订书机/起针器</a><a href="#">订书针</a><a href="#">打孔器</a><a href="#">笔筒</a><a href="#">名片册/名片盒</a><a href="#">回形针/大头针/土镇</a><a href="#">便签纸/盒</a><a href="#">书立</a><a href="#">文件栏</a><a href="#">文件盘</a><a href="#">文件柜</a><a href="#">胶带座</a><a href="#">转笔刀/削笔器</a><a href="#">推夹器/推夹钉</a></p>
+				</div>
+				<div class="fenlei">
+					<span>辅助用品</span>
+					<p><a href="#">胶水/胶棒</a><a href="#">修正带/修正液</a><a href="#">长尾夹/白钢夹</a><a href="#">剪刀</a><a href="#">美工刀</a><a href="#">尺类</a><a href="#">皮筋/橡皮</a><a href="#">胶条/胶带</a><a href="#">双面夹/美纹纸</a><a href="#">封箱器</a><a href="#">装订原子夹</a><a href="#">切纸刀</a><a href="#">书写垫板</a><a href="#">测绘工具</a></p>
+				</div>
+				<div class="fenlei">
+					<span>财务用品</span>
+					<p><a href="#">印台/印油</a><a href="#">修正带/修正液</a><a href="#">账本/账页</a><a href="#">收据/出入库</a><a href="#">牛皮纸/档案袋</a><a href="#">口取纸/复写纸</a><a href="#">支票夹</a><a href="#">自动号码机</a><a href="#">财务用章</a><a href="#">印章盒/手提金库</a><a href="#">海绵缸</a><a href="#">财务装订附件</a></p>
+				</div>
+				<div class="fenlei"> 
+					<span>本簿系列</span>
+					<p><a href="#">胶装笔记本</a><a href="#">线圈笔记本</a><a href="#">硬皮笔记本</a><a href="#">活页本/活页心</a><a href="#">商务贴/指示标贴</a><a href="#">手写标贴</a><a href="#">信纸/信封</a><a href="#">红包/请柬/贺卡</a><a href="#">证书/聘书/奖状</a><a href="#">嘉宾签到簿</a></p>
+				</div>
+				<div class="fenlei"> 
+					<span>会议及展示</span>
+					<p><a href="#">白板</a><a href="#">软木板</a><a href="#">报刊架/杂志架</a><a href="#">胸卡.挂绳</a><a href="#">会议桌牌/台卡</a><a href="#">标识标牌</a><a href="#">硬质卡片袋</a><a href="#">镜框</a><a href="#">旗帜、徽章</a><a href="#">地图/地球仪</a></p>
+				</div>
+			</div>
+			<div class="right">
+				<h3>推荐品牌</h3>
+				<ul>
+					<li><a href="#">鑫乐</a></li>
+					<li><a href="#">高品乐</a></li>
+					<li><a href="#">百旺</a></li>
+					<li><a href="#">旗舰</a></li>
+					<li><a href="#">Doublea A</a></li>
+					<li><a href="#">加印</a></li>
+					<li><a href="#">童丽来</a></li>
+					<li><a href="#">联想(Lenovo)</a></li>
+					<li><a href="#">松下</a></li>
+					<li><a href="#">鑫乐</a></li>
+					<li><a href="#">高品乐</a></li>
+					<li><a href="#">百旺</a></li>
+					<li><a href="#">旗舰</a></li>
+					<li><a href="#">Doublea A</a></li>
+					<li><a href="#">加印</a></li>
+					<li><a href="#">童丽来</a></li>
+					<li><a href="#">联想(Lenovo)</a></li>
+					<li><a href="#">松下</a></li>
+					<li><a href="#">松下</a></li>
+					<li><a href="#">松下</a></li>
+					<li><a href="#">松下</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="details" id="details3">
+			<div class="left">
+				<div class="fenlei">
+					<span >复印机/传真机</span>
+					<p><a href="#">复印机</a><a href="#">传真机</a></p>
+				</div>
+				<div class="fenlei">
+					<span>打印设备</span>
+					<p><a href="#">打印机</a><a href="#">一体机</a><a href="#">针式打印机</a><a href="#">标签打印机/色带</a><a href="#">扫描仪</a></p>
+				</div>
+				<div class="fenlei"> 
+					<span>财务行政设备</span>
+					<p><a href="#">考勤机</a><a href="#">点钞验钞机</a><a href="#">支票打印机</a><a href="#">装订机</a><a href="#">标价机</a><a href="#">封口机</a></p>
+				</div>
+				<div class="fenlei"> 
+					<span>印后处理设备</span>
+					<p><a href="#">碎纸机</a><a href="#">塑封机</a><a href="#">切纸机</a></p>
+				</div>
+				<div class="fenlei"> 
+					<span>装订塑封耗材</span>
+					<p><a href="#">装订封面/皮纹纸</a><a href="#">装订胶片</a><a href="#">装订胶圈、铁圈</a><a href="#">装订铆管、钻刀</a><a href="#">热熔封套</a><a href="#">装订夹条、钉条</a></p>
+				</div>
+			</div>
+			<div class="right">
+				<h3>推荐品牌</h3>
+				<ul>
+					<li><a href="#">兄弟</a></li>
+					<li><a href="#">佳能</a></li>
+					<li><a href="#">HP</a></li>
+					<li><a href="#">旗舰</a></li>
+					<li><a href="#">Doublea A</a></li>
+					<li><a href="#">加印</a></li>
+					<li><a href="#">童丽来</a></li>
+					<li><a href="#">联想(Lenovo)</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="details" id="details4">
+			<div class="left">
+				<div class="fenlei">
+					<span >电脑整机</span>
+					<p><a href="#">笔记本</a><a href="#">台式机</a><a href="#">一体机</a></p>
+				</div>
+				<div class="fenlei"> 
+					<span>存储介质</span>
+					<p><a href="#">刻录光盘</a><a href="#">U盘</a><a href="#">移动硬盘</a><a href="#">存储卡</a></p>
+				</div>
+				<div class="fenlei"> 
+					<span>电脑周边</span>
+					<p><a href="#">鼠标</a><a href="#">键盘</a><a href="#">摄像头/散热器</a><a href="#">耳机/耳麦</a><a href="#">HUB/读卡器</a><a href="#">音响/麦克风</a><a href="#">鼠标垫</a><a href="#">电脑清洁</a>
+					<a href="#">光盘存储</a><a href="#">线缆</a><a href="#">布线工具</a><a href="#">插座/接线板</a></p>
+				</div>
+				<div class="fenlei"> 
+					<span>数码/通讯</span>
+					<p><a href="#">电话机</a><a href="#">对讲机</a><a href="#">录音笔</a><a href="#">激光笔/翻页笔</a></p>
+				</div>
+				<div class="fenlei"> 
+					<span>网络产品</span>
+					<p><a href="#">路由器</a><a href="#">交换机</a></p>
+				</div>
+			</div>
+			<div class="right">
+				<h3>推荐品牌</h3>
+				<ul>
+					<li><a href="#">鑫乐</a></li>
+					<li><a href="#">高品乐</a></li>
+					<li><a href="#">百旺</a></li>
+					<li><a href="#">旗舰</a></li>
+					<li><a href="#">Doublea A</a></li>
+					<li><a href="#">加印</a></li>
+					<li><a href="#">童丽来</a></li>
+					<li><a href="#">联想(Lenovo)</a></li>
+					<li><a href="#">松下</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="details" id="details5">
+			<div class="left">
+				<div class="fenlei">
+					<span >小家电</span>
+					<p><a href="#">复印纸</a><a href="#">传真纸</a><a href="#">电脑打印纸</a><a href="#">彩喷纸相片纸</a><a href="#">标贴打印纸</a><a href="#">收银纸/标价纸</a><a href="#">彩色复印纸</a><a href="#">绘图纸</a><a href="#">工程纸</a><a href="#">草图纸/硫酸纸</a><a href="#">銅版紙/白卡紙</a><a href="#">彩激紙</a></p>
+				</div>
+				<div class="fenlei">
+					<span>日常用品</span>
+					<p><a href="#">佳能(Canon)墨盒</a><a href="#">愛普生(EPSON)墨盒</a><a href="#">兄弟(brother)墨盒</a><a href="#">三星(SAMSUNG)墨盒</a><a href="#">三星(SAMSUNG)墨盒</a><a href="#">三星(SAMSUNG)墨盒</a><a href="#">三星(SAMSUNG)墨盒</a><a href="#">三星(SAMSUNG)墨盒</a><a href="#">三星(SAMSUNG)墨盒</a><a href="#">三星(SAMSUNG)墨盒</a></p>
+				</div>
+				<div class="fenlei"> 
+					<span>清洁用品</span>
+					<p><a href="#">厨卫清洁</a><a href="#">义务洗涤</a><a href="#">个人洗护</a></p>
+				</div>
+				<div class="fenlei"> 
+					<span>生活日用</span>
+					<p><a href="#">卫生纸</a><a href="#">纸杯/塑料杯</a><a href="#">一次性用品</a><a href="#">杀虫/驱蚊</a><a href="#">空气清新</a><a href="#">垃圾袋</a><a href="#">手提袋/超市连卷袋</a><a href="#">自封袋/玻璃带</a></p>
+				</div>
+				<div class="fenlei"> 
+					<span>食品饮料</span>
+					<p><a href="#">咖啡/奶茶</a><a href="#">饮用水</a><a href="#">饮料</a><a href="#">方便面</a><a href="#">酒类</a></p>
+				</div>
+			</div>
+			<div class="right">
+				<h3>推荐品牌</h3>
+				<ul>
+					<li><a href="#">鑫乐</a></li>
+					<li><a href="#">高品乐</a></li>
+					<li><a href="#">百旺</a></li>
+					<li><a href="#">旗舰</a></li>
+					<li><a href="#">Doublea A</a></li>
+					<li><a href="#">加印</a></li>
+					<li><a href="#">童丽来</a></li>
+					<li><a href="#">联想(Lenovo)</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="details" id="details6">
+			<div class="left">
+				<div class="fenlei"> 
+					<span>存储柜</span>
+					<p><a href="#">铁皮文件柜</a><a href="#">更衣柜</a><a href="#">底图柜</a><a href="#">书刊柜</a><a href="#">推柜</a><a href="#">多提鬼/组合柜</a><a href="#">密集柜</a></p>
+				</div>
+				<div class="fenlei">
+					<span>保险柜</span>
+					<p><a href="#">保险柜/保险箱</a></p>
+				</div>
+				<div class="fenlei"> 
+					<span>办公桌台</span>
+					<p><a href="#">办公桌/电脑桌</a><a href="#">班台</a><a href="#">会议桌</a><a href="#">洽谈桌</a></p>
+				</div>
+			</div>
+			<div class="right">
+				<h3>推荐品牌</h3>			
+			</div>
+		</div>
+		<div class="details" id="details7">
+			<div class="left">
+				<div class="fenlei"> 
+					<span>体育用品</span>
+					<p><a href="#">运动服饰</a><a href="#">运动鞋包</a><a href="#">球类</a><a href="#">棋牌麻将</a><a href="#">运动护具</a><a href="#">户外装备</a><a href="#">健身训练</a><a href="#">其他</a></p>
+				</div>
+			</div>
+			<div class="right">
+				<h3>推荐品牌</h3>
+			</div>
+		</div>
+		<div class="details" id="details8">
+			<div class="left">
+				<div class="fenlei"> 
+					<span>文具本册</span>
+				</div>
+				<div class="fenlei"> 
+					<span>礼品套装</span>
+				</div>
+				<div class="fenlei"> 
+					<span>礼品套装</span>
+				</div>
+				<div class="fenlei"> 
+					<span>创意促销</span>
+				</div>
+				<div class="fenlei"> 
+					<span>工艺礼品</span>
+				</div>
+			</div>
+			<div class="right">
+				<h3>推荐品牌</h3>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ==========================sidebar ended=============================== -->
+<div id="prod_discrible">
+	<div class="top">
+		<a href="../index.html">商品展示</a><span>&gt;</span><a href="#">咖啡奶茶</a><span>&gt;</span><a href="../index.html">雀巢咖啡 1+2 原味 1200g 罐装 速溶咖啡</a>
+	</div>
+	<div id="prod_wrap">
+		<div class="prod_img">
+			<div class="small">
+				<img src="../imgs/prod_details/coffee.jpg" />
+				<img class="big" src="../imgs/prod_details/coffee.jpg" />
+				<div class="spell"></div>				
+			</div>
+			<div class="pages">
+				<img src="../imgs/prod_details/coffee.jpg" alt="">
+				<span class="prev"></span>
+				<span class="next"></span>
+			</div>
+			<div class="share">
+				<span>分享到：</span>
+				<a href="#">新浪微博</a>
+				<a href="#" class="tencent">腾讯微博</a>
+				<a href="#" class="renren">人人网</a>
+				<a href="#" class="weixin">微信</a>
+			</div>
+			<div class="share1">
+				<strong>分享到</strong>
+				<div class="links1">
+					<a href="#">一键分享</a>
+					<a href="#">一键分享</a>
+					<a href="#">一键分享</a>
+					<a href="#">一键分享</a>
+					<a href="#">一键分享</a>
+					<a href="#">一键分享</a>
+					<a href="#">一键分享</a>
+					<a href="#">一键分享</a>
+					<a href="#">一键分享</a>
+					<a href="#">一键分享</a>
+					<a href="#">一键分享</a>
+					<a href="#">一键分享</a>
+					<a href="#">一键分享</a>
+					<a href="#">一键分享</a>
+					<a href="#">一键分享</a>
+					<a href="#">一键分享</a>
+				</div>
+				<div class="more"><a href="#">更多...</a></div>
+			</div>
+		</div>
+		<div class="prod_selection">
+			<h2 class="prodname">雀巢/Nestle 1+2原味即溶咖啡饮品 速溶咖啡42+6原味 48条装 720g/盒</h2>
+			<div class="infos">
+				<p><strong>商品货号：</strong><span>15501001</span></p>
+				<p><strong>商品品牌：</strong><span>雀巢</span></p>
+				<p style="height: 26px;line-height: 26px;"><strong>已出售：</strong><span>382件</span></p>
+				<div class="version">
+					<strong>选择版本：</strong>
+					<div>
+						<span>48条 720g</span><span>太古方糖 720g</span><span>30条 720g</span><span>原味灌装 1200g</span><span>纯品瓶装 1200g</span><span>咖啡伴侣 720g</span><span>纯品灌装 720g</span>
+					</div>
+				</div>
+				<p class="price"><strong>中一价格:</strong><span>￥9.90/盒</span></p>
+				<div class="buynum">
+					<strong>购买数量:</strong>
+					<input type="text" id="num" value="1" />
+					<div><span class="minus"></span><span class="add"></span></div>
+				</div>
+				<div class="buy">
+					<button>立刻购买</button>
+					<a href="#">加入购物车</a>
+					<a href="#">收藏商品</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 商品详情 -->
+<div id="more_details">
+	<div class="details_left">
+		<div class="side_tit">
+			<div class="side_ads">
+				<h3>最新商品</h3>
+				<dl>
+					<dt>
+						<a href="#"><img src="../imgs/prod_details/1467373646.jpg" /></a>
+					</dt>
+					<dd>
+						<a href="#">立顿（Lipton） 茶叶 茉莉花茶25包 50g</a>
+						<span>¥12.50/盒</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<a href="#"><img src="../imgs/prod_details/1467375607.jpg" /></a>
+					</dt>
+					<dd>
+						<a href="#">立顿（Lipton） 茶叶 茉莉花茶25包 50g</a>
+						<span>¥12.50/盒</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<a href="#"><img src="../imgs/prod_details/1467370052.jpg" /></a>
+					</dt>
+					<dd>
+						<a href="#">立顿（Lipton） 茶叶 茉莉花茶25包 50g</a>
+						<span>¥12.50/盒</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<a href="#"><img src="../imgs/prod_details/1467378699.jpg" /></a>
+					</dt>
+					<dd>
+						<a href="#">立顿（Lipton） 茶叶 茉莉花茶25包 50g</a>
+						<span>¥12.50/盒</span>
+					</dd>
+				</dl>
+			</div>
+			<div class="side_ads">
+				<h3>促销商品</h3>
+			</div>
+			<div class="side_ads">
+				<h3>热销排行</h3>
+			</div>
+			<div class="side_ads">
+				<h3>您可能会喜欢</h3>
+				<dl>
+					<dt>
+						<a href="#"><img src="../imgs/prod_details/1467373646.jpg" /></a>
+					</dt>
+					<dd>
+						<a href="#">立顿（Lipton） 茶叶 茉莉花茶25包 50g</a>
+						<span>¥12.50/盒</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<a href="#"><img src="../imgs/prod_details/1467373646.jpg" /></a>
+					</dt>
+					<dd>
+						<a href="#">立顿（Lipton） 茶叶 茉莉花茶25包 50g</a>
+						<span>¥12.50/盒</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<a href="#"><img src="../imgs/prod_details/1467373646.jpg" /></a>
+					</dt>
+					<dd>
+						<a href="#">立顿（Lipton） 茶叶 茉莉花茶25包 50g</a>
+						<span>¥12.50/盒</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<a href="#"><img src="../imgs/prod_details/1467373646.jpg" /></a>
+					</dt>
+					<dd>
+						<a href="#">立顿（Lipton） 茶叶 茉莉花茶25包 50g</a>
+						<span>¥12.50/盒</span>
+					</dd>
+				</dl>
+			</div>
+			<div class="side_ads">
+				<h3>最近浏览</h3>
+				<dl>
+					<dt>
+						<a href="#"><img src="../imgs/prod_details/1467373646.jpg" /></a>
+					</dt>
+					<dd>
+						<a href="#">立顿（Lipton） 茶叶 茉莉花茶25包 50g</a>
+						<span>¥12.50/盒</span>
+					</dd>
+				</dl>
+			</div>
+		</div>
+
+	</div>
+	<div class="details_right"></div>
+</div>
+
+
+<!-- footer -->
+<div id="footer">
+	<div class="ft_links">
+		<ul class="links">
+			<li class="link_tit">购物指南<span></span></li>
+			<li><a href="#">新用户注册</a></li>
+			<li><a href="#">购物流程</a></li>
+			<li><a href="#">订单查询</a></li>
+			<li><a href="#">常见购物问题</a></li>
+		</ul>
+		<ul class="links">
+			<li class="link_tit">订单支付<span></span></li>
+			<li><a href="#">货到付款</a></li>
+			<li><a href="#">在线支付</a></li>
+			<li><a href="#">如何办理退款</a></li>
+			<li><a href="#">发票制度</a></li>
+		</ul>
+		<ul class="links">
+			<li class="link_tit">订单配送<span></span></li>
+			<li><a href="#">配送费用</a></li>
+			<li><a href="#">配送时间和范围</a></li>
+			<li><a href="#">配送常见问题</a></li>
+			<li><a href="#">配送方式</a></li>
+		</ul>
+		<ul class="links">
+			<li class="link_tit">售后服务<span></span></li>
+			<li><a href="#">缺货处理</a></li>
+			<li><a href="#">退换货政策</a></li>
+			<li><a href="#">退换货流程</a></li>
+			<li><a href="#">练习客服</a></li>
+		</ul>
+		<ul class="links">
+			<li class="link_tit">帮助中心<span></span></li>
+			<li><a href="#">关于我们</a></li>
+			<li><a href="#">积分兑换</a></li>
+			<li><a href="#">建议返回</a></li>
+			<li><a href="#">正品保证</a></li>
+		</ul>
+		
+	</div>
+	<div class="ft_copyright">
+		Copyright&copy;2016北京中一文艺商贸有限公司 All Right Reserved备案号：京ICP备14012128号<br />
+		世纪中一（zy100）专业办公用品采购平台,低价正品,假一罚十,货到付款,免费退换货. 专注于为客户提供各类办公用品、办公设备、耗材、文具、复印纸、日用品, 定制服务、数码产品。
+	</div>
+</div>
 	
 </body>
 </html>
