@@ -25,7 +25,7 @@ $(function(){
 		$('.item_list').hide();
 	});
 
-	/*点击或者鼠标悬浮时分享的方框显示*/
+	/*------------点击或者鼠标悬浮时分享的方框显示--------------*/
 	$('#shareto').hover(function(){
 		$(this).parent('.share').next('.share1').show();
 	},function(){
@@ -126,6 +126,28 @@ $(function(){
 	});
 
 
+	/*=========================切换选择的商品版本====================*/
+	$('.version').on('click','span',function(){
+		$(this).addClass('want').siblings('span').removeClass('want');
+	});
 
+	/*=========================修改商品数量====================*/
+	
+	$('.minus').on('click',function(){
+		var num = parseInt($('#num').val());
+		console.log(typeof num);
+		num--;
+		if(num <= 0){
+			return;
+		}
+		$('#num').val(num);
+	});
+
+	$('.add').on('click',function(){
+		var num = parseInt($('#num').val());
+		console.log(num);
+		num++;
+		$('#num').val(num);
+	});
 
 });

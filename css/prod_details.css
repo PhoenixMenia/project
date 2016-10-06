@@ -14,14 +14,14 @@ input{border:0;}
 #sidebar{position: relative;left: 20px;top: 33px;}
 #subnav{width: 219px;position: absolute;left: 0;top: -80px;}
 #subnav h2{height: 47px;background: url(../imgs/index/list.jpg) no-repeat;}
-.item_list{padding:0 3px 10px;background:#E84848;position: relative;top: -2px;display: none;z-index: 300;}
+.item_list{padding:0 0 10px 3px;background:#E84848;position: relative;top: -2px;display: none;z-index: 300;}
 .item_list li{height: height:40px;line-height: 40px;padding-left: 25px;color: #fff;border-bottom: 1px dashed #f27676;}
 .item_list li a{color: #fff;font-size: 14px;}
 .item_list li span{float: right;padding-right: 10px;font-size: 9px;}
 .item_list li:hover{background: #fff;color: #E70012;}
 .item_list li:hover a{color: #E70012;text-decoration: none;}
 
-.details{width: 725px;position: absolute;background: #fff;left: 212px;top: 45px;display: none;z-index: 200;padding-top: 15px;border:1px solid #eee;}
+.details{width: 725px;position: absolute;background: #fff;left: 218px;top: 45px;display: none;z-index: 200;padding-top: 15px;border:1px solid #eee;}
 #details2{top: 60px;}
 #details3{top: 60px;}
 #details4{top: 60px;}
@@ -114,15 +114,16 @@ input{border:0;}
 .version{overflow: hidden;border-bottom: 1px dashed #b1b1b1;}
 .version strong{font-size: 14px;display: block;width: 80px;height: 24px;line-height:24px;float: left;color: #666;}
 .version div{width: 750px;float: right;overflow: hidden;height: 75px;}
-.version div span{display: inline-block;height: 23px;line-height: 23px;padding: 0 20px;border:1px solid #ccc;margin: 0 12px 10px 0;}
+.version span{display: inline-block;height: 23px;line-height: 23px;padding: 0 20px;border:1px solid #ccc;margin: 0 12px 10px 0;}
+.version span.want{border-color: #f00;background: url(../imgs/prod_details/want.jpg) no-repeat right bottom;}
 .infos p.price{height: 50px;line-height: 50px;border-bottom: 1px dashed #b1b1b1;}
 .infos p.price span{color: #d11102;font-weight: bold;}
 .buynum{height: 59px;border-bottom: 1px dashed #b1b1b1;}
 .buynum strong{float: left;height: 59px;width: 61px;line-height: 59px;font-size: 12px;}
 .buynum input{width: 50px;height: 26px;border:1px solid #ccc;float: left;margin-top: 14px;text-align: center;}
 .buynum div{width: 16px;height: 28px;float: left;margin: 14px 0 0 7px;border:1px solid #ccc;}
-.buynum span{display: inline-block;width: 14px;height: 12px;background: url(../imgs/prod_details/1.jpg) no-repeat center;}
-.buynum .add{border-top: 1px solid #ccc;background-image: url(../imgs/prod_details/2.jpg);}
+.buynum span{display: inline-block;width: 14px;height: 12px;background: url(../imgs/prod_details/2.jpg) no-repeat center;}
+.buynum .add{border-top: 1px solid #ccc;background-image: url(../imgs/prod_details/1.jpg);}
 .buy{padding: 20px 0 0 11px;font-size: 14px;text-align: center;}
 .buy button,.buy a{width: 86px;height: 27px;border:1px solid;color: #fff;border-radius: 4px;float: left;}
 .buy button{background: linear-gradient(#fd7373,#b80000);font-weight: bold;border-color: #de0202;margin-right: 18px;}
