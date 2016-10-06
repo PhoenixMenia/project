@@ -50,7 +50,7 @@ $(function(){
 		$(this).hide();
 	});
 
-	//选项卡切换；
+	/*=====================选项卡切换===================*/
 	$('.list li').each(function(index,element){
 		$(this).on('click',function(){
 			$(this).addClass('current').siblings('li').removeClass('current');
@@ -58,6 +58,72 @@ $(function(){
 		});
 	});
 
+	/*=========================评论====================*/
+	var oDiv = '',
+		i = 0,
+		ran =  100000;
+	$('#launch').on('click',function(){
+		var comTxt = $('#comm_content').val().replace(/^\s+|\s+$/,''),			
+			youke_id = 'youke'+ ran,
+			oTime = new Date(),
+			oTime1 = oTime.getFullYear() + '-' + (oTime.getMonth()+1) + '-' + oTime.getDate() + ' ' + oTime.getHours() + ':' + oTime.getMinutes() + ':' + oTime.getSeconds(),
+			oDiv = '<div class="pinglun"><strong>'+youke_id+'</strong><p>'+comTxt+'</p><p class="shijian">' + oTime1 + '</p></div>';
+		if(!comTxt){
+			return;
+		}
+		$(oDiv).prependTo('.comments');
+		i++;
+		$('#shu').text(i);
+		ran++;
+		$('#comm_content').val('');
+	});
+
+	/*=========================切换图片====================*/
+	$('.pages img').on('click',function(){
+		var _index = $(this).index();
+		$(this).addClass('xuanzhong').siblings('img').removeClass('xuanzhong');
+		$('.zuobian').eq(_index).show().siblings('.zuobian').hide();
+		$('.big_wrap').children().eq(_index).show().siblings('img').hide();
+	});
+
+	/*=========================图片放大镜====================*/
+	var spellWidth = $('.spell').width(),
+		spellHeight = $('.spell').height(),
+		boxWidth = $('.small').innerWidth(),
+		boxHeight = $('.small').innerHeight();
+	$('.small').hover(function(){
+		var _index1 = $('.pages .xuanzhong').index();
+		$('.spell').show();
+		$('.big_wrap').fadeIn(500);
+	},function(){
+		$('.spell').hide();
+		$('.big_wrap').hide();
+	}).on('mousemove',function(event){
+		var _left = event.pageX - spellWidth/2,
+			_top = event.pageY - spellHeight/2;
+
+		$('.spell').offset({'left':_left,'top':_top});
+
+		_left = $('.spell').position().left;
+		_top = $('.spell').position().top;
+		if(_left <= 0){
+			_left = 0;
+		}else if(_left >= boxWidth - spellWidth){
+			_left = boxWidth - spellWidth;
+		}
+
+		if(_top <= 0){
+			_top = 0;
+		}else if(_top >= boxHeight - spellHeight){
+			_top = boxHeight - spellHeight;
+		}
+
+		$('.spell').css({'left':_left,'top':_top});
+		$('.big_wrap img').css({
+			'top' : -2*_top,
+			'left' : -2*_left
+		});
+	});
 
 
 
