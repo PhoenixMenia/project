@@ -26,12 +26,12 @@ $(function(){
 	});
 
 	/*------------点击或者鼠标悬浮时分享的方框显示--------------*/
+	var html = $('#share_more').html();
 	$('#shareto').hover(function(){
 		$(this).parent('.share').next('.share1').show();
 	},function(){
 		$(this).parents('.share').next('.share1').hide();
 	}).on('click',function(){
-		var html = $('#share_more').html();
 		$('#share_more').get(0).innerHTML += $('.share1').get(0).innerHTML;
 		$('#share_more').show().find('#close').on('click',function(){		
 			$(this).parents('#share_more').html(html).hide();
@@ -39,8 +39,7 @@ $(function(){
 	});
 
 	$('.share1').hover(function(){
-		$(this).show().find('#more').click(function(){
-			var html =  $('#share_more').html();
+		$(this).show().find('#more').click(function(){			
 			$('#share_more').get(0).innerHTML += $('.share1').get(0).innerHTML;
 			$('#share_more').show().find('#close').on('click',function(){		
 				$(this).parents('#share_more').html(html).hide();
@@ -127,8 +126,13 @@ $(function(){
 
 
 	/*=========================切换选择的商品版本====================*/
+	var coffe_price = ['￥9.90/盒','￥9.90/盒','￥36.00/盒','￥72.00/罐','￥78.00/瓶','￥34.80/瓶','￥98.00/罐',];
+
 	$('.version').on('click','span',function(){
+		var _index = $(this).index();
 		$(this).addClass('want').siblings('span').removeClass('want');
+		//切换商品价格
+		$('.price').find('span').text(coffe_price[_index]);
 	});
 
 	/*=========================修改商品数量====================*/
@@ -149,5 +153,9 @@ $(function(){
 		num++;
 		$('#num').val(num);
 	});
+
+	//待完善 cookie
+
+
 
 });

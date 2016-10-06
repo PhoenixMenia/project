@@ -1,0 +1,28 @@
+input{border:1px solid #d8d8d8;}
+.red{color: red;}
+
+
+.qiehuan{height: 40px;line-height: 40px;color: #0000f0;font-weight: bold;font-size: 14px;background: #f3f3f3;}
+.qiehuan span{display: inline-block;height: 40px;padding: 0 16px;border:1px solid #e6e6e6;border-top: 0;border-bottom: 0;}
+.qiehuan span.clicked{background: #fff;}
+
+.newreg{height: 38px;padding-top: 20px;overflow: hidden;line-height: 38px;}
+.newreg span{width: 216px;padding-right: 11px;text-align: right;float: left;height: 100%;background: url(../imgs/user.jpg) no-repeat 196px center;}
+.newreg strong{width: 753px;float: left;height: 100%;}
+#userreg{margin-bottom: 10px;}
+#userreg p{height: 36px;line-height: 36px;overflow: hidden;}
+#userreg p span{width: 216px;padding-right: 11px;text-align: right;float: left;height: 100%;color: #666;}
+#userreg p input,#userreg p strong{float: left;height: 24px;line-height: 24px;margin-top: 5px;}
+#userreg p strong.normal{color: #666;font-weight: normal;padding: 0;}
+#userreg p input{width: 206px;color: #666;}
+#userreg p strong{padding-left: 10px;color: #f00;}
+#userreg #check{height: 54px;line-height: 54px;}
+#userreg #check input{width: 16px;height: 16px;border-radius: 2px;margin-top: 20px;}
+#userreg #check span{text-align: left;color: #000;}
+#userreg #check span.xieyi{float: none;color: #f00;}
+
+#regi{width: 86px;height: 27px;background: linear-gradient(#fe7879,#b80000);border:1px solid #de0202;border-radius: 4px;color: #fff;font-weight: bold;}
+
+.infos>a{display: block;margin-left: 227px;padding-left: 18px;height: 20px;line-height: 20px;background: url(../imgs/a.jpg) no-repeat left center;}
+
+.enterprise{display: none;}

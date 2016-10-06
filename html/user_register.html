@@ -2,9 +2,117 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>用户注册</title>
+	<link rel="stylesheet" href="../css/base_style.css" />
+	<link rel="stylesheet" href="../css/user_register.css" />
+	<script src="../js/jquery/jquery-1.12.4.js"></script>
+	<script src="../js/jquery/jquery.cookie.js"></script>
+	<script src="../js/base.js"></script>
+	<script src="../js/user_register.js"></script>
 </head>
 <body>
+<!-- 头部 -->
+<div id="regi_head">
+	<div id="header_con">
+		<h1><img src="../imgs/index/logo.jpg" alt="中一办公" title="logo" /></h1>
+		<div>
+			<p><a href="../index.html">返回主页</a> | <a href="#">帮助中心</a></p>
+			<strong>如遇注册问题请拨打：<span>010-67266715</span></strong>
+		</div>
+	</div>
+</div>
+
+<!-- 主题部分 -->
+<div id="main_body">
+	<div class="borderred"></div>
+	<div class="qiehuan"><span style="border-right: 0;" class="clicked">个人用户注册</span><span>企业用户注册</span></div>
+	<div class="infos">
+		<p class="newreg"><span></span><strong class="red">新用户注册</strong></p>
+		<form action="" name="register" method="post" id="userreg">
+			<p><span>用户名</span><input type="text" class="user_name" /><strong>*</strong></p>
+			<p><span>email</span><input type="text" class="user_email" /><strong>*</strong></p>
+			<p><span></span><strong class="normal">请正确填写您的常用电子邮件地址，作为密码取回之用。</strong></p>
+			<p><span>密码</span><input type="password" class="user_pwd" /><strong>*</strong></p>
+			<p><span>确认密码</span><input type="password" class="pwd_confirm" /><strong>*</strong></p>
+			<div class="personal">
+				<p><span>MSN</span><input type="text" class="user_msn" /></p>
+				<p><span>QQ</span><input type="text" class="user_qq" /></p>
+				<p><span>办公电话</span><input type="text" class="office_phone" /></p>
+				<p><span>家庭电话</span><input type="text" class="family_phone" /></p>
+			</div>
+			<div class="enterprise">
+				<p><span>固定电话</span><input type="text" class="fixed_phone" /></p>
+			</div>
+			<p><span>手机</span><input type="text" class="mobile" /></p>
+			<p>
+				<span>密码提示问题</span>
+				<select name="question" id="question">
+					<option value="-1">无安全问题</option>
+					<option value="1">母亲的名字</option>
+					<option value="2">爷爷的名字</option>
+					<option value="3">父亲出生的城市</option>
+					<option value="4">其中一个老师的名字</option>
+					<option value="4">个人计算机的型号</option>
+					<option value="6">你最喜欢的餐馆名称</option>
+					<option value="6">驾驶执照的最后四位数字</option>
+				</select>
+			</p>
+			
+			<p><span>密码问题答案</span><input type="text" class="anwser" /><strong class="red">*</strong></p>
+			<p id="check" ><span></span><input type="checkbox" checked="checked" /><span>&nbsp;我已看过并接受<span class="xieyi">用户协议</span></span></p>
+			<p><span></span><button id="regi">立即注册</button></p>
+		</form>
+		<a href="login.html">我已有账号，我要登录</a>
+		<a href="#">您忘记密码了吗？</a>
+	</div>
+</div>
+
+
+<!-- footer -->
+<div id="footer">
+	<div class="ft_links">
+		<ul class="links">
+			<li class="link_tit">购物指南<span></span></li>
+			<li><a href="#">新用户注册</a></li>
+			<li><a href="#">购物流程</a></li>
+			<li><a href="#">订单查询</a></li>
+			<li><a href="#">常见购物问题</a></li>
+		</ul>
+		<ul class="links">
+			<li class="link_tit">订单支付<span></span></li>
+			<li><a href="#">货到付款</a></li>
+			<li><a href="#">在线支付</a></li>
+			<li><a href="#">如何办理退款</a></li>
+			<li><a href="#">发票制度</a></li>
+		</ul>
+		<ul class="links">
+			<li class="link_tit">订单配送<span></span></li>
+			<li><a href="#">配送费用</a></li>
+			<li><a href="#">配送时间和范围</a></li>
+			<li><a href="#">配送常见问题</a></li>
+			<li><a href="#">配送方式</a></li>
+		</ul>
+		<ul class="links">
+			<li class="link_tit">售后服务<span></span></li>
+			<li><a href="#">缺货处理</a></li>
+			<li><a href="#">退换货政策</a></li>
+			<li><a href="#">退换货流程</a></li>
+			<li><a href="#">练习客服</a></li>
+		</ul>
+		<ul class="links">
+			<li class="link_tit">帮助中心<span></span></li>
+			<li><a href="#">关于我们</a></li>
+			<li><a href="#">积分兑换</a></li>
+			<li><a href="#">建议返回</a></li>
+			<li><a href="#">正品保证</a></li>
+		</ul>
+		
+	</div>
+	<div class="ft_copyright">
+		Copyright&copy;2016北京中一文艺商贸有限公司 All Right Reserved备案号：京ICP备14012128号<br />
+		世纪中一（zy100）专业办公用品采购平台,低价正品,假一罚十,货到付款,免费退换货. 专注于为客户提供各类办公用品、办公设备、耗材、文具、复印纸、日用品, 定制服务、数码产品。
+	</div>
+</div>
 	
 </body>
 </html>

@@ -111,3 +111,17 @@ input{border:0;}
 /*==============回到顶部===============*/
 #back_to_top{width: 17px;height: 82px;padding-top: 15px;border:1px solid #cdcdcd;border-radius: 4px;text-align: center;cursor: pointer;background: url(../imgs/123.jpg) no-repeat center 7px;color:#878787;position:fixed;right: 10px;bottom: 130px;}
 
+
+
+/* -----------------------login、register的公用样式---------------------- */
+#regi_head{width: 100%;height: 96px;border-bottom: 1px solid #dbdbdb;background: url(../imgs/head_bg.jpg) repeat-x left top;}
+#header_con{width: 980px;height: 96px;margin: 0 auto;overflow: hidden;}
+#header_con h1{width: 726px;height: 78px;float: left;padding: 18px 0 0 4px;}
+#header_con div{width: 250px;height: 100%;background: yellow;float:left;background: url(../imgs/hotline1.jpg) no-repeat left 50px;}
+#header_con p{padding-top: 23px;height: 33px;line-height: 33px;text-align: right;color: #8b549f;}
+#header_con p a{color: #315480;}
+#header_con  strong{display: block;height: 32px;line-height: 32px;text-align: right;color: #4f4f4f;}
+#header_con  strong span{color: #ac0000;font-weight: normal;}
+#main_body{width: 980px;min-height: 600px;height: auto!important;height: 600px;border:1px solid #c1c1c1;margin: 19px auto 0;position: relative;padding-bottom: 65px;}
+.borderred{width: 980px;height: 2px;background: #e72110;position: absolute;left: 0x;top: -2px;}
+
