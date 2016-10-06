@@ -1,0 +1,18 @@
+input{border:1px solid #d4d4d4;font-size : 16px;line-height: 44px;}
+#main_body{height: 587px;background: url(../imgs/logi_bg.jpg) no-repeat 15px 144px;position: relative;}
+h2{height: 103px;padding-left: 85px;color: #000;font:bold 28px/103px "宋体";}
+
+form{width: 392px;height: 430px;border:1px solid #ececec;border-bottom: 0;position: absolute;bottom: 2px;right: 33px;padding: 19px 0 0 25px;}
+form>span{display: block;height: 42px;font:bold 14px/42px "宋体";}
+input[type="text"],input[type="password"]{width: 365px;height: 44px;}
+.verification{width: 392px;height: 46px;}
+.verification input{width: 110px;margin-right: 4px;float: left;}
+.verification span{display: inline-block;width: 48px;height: 18px;border:1px solid #999596;background: #ffffed;float: left;margin-top: 13px;color: #2b2f18;font: bold 16px/18px "宋体";letter-spacing: 4px;text-align: center;}
+.verification a{float: left;color: #000;padding-left: 4px;font: bold 14px/46px "宋体";}
+
+.auto_login{height: 80px;font: bold 12px/80px "宋体";padding-left: 70px;}
+.auto_login input{width: 15px;height: 15px;border:1px solid #c6c6c6;border-radius: 4px;background: #dedede;margin-right: 10px;position: relative;top: 4px;}
+.auto_login a{color: #000;margin-left: 24px;}
+.login_btn,.to_regi{width: 118px;height: 44px;background: #e70012;color: #fff;font-size: 18px;}
+.to_regi{display: inline-block;margin: 0;line-height: 44px;text-align: center;margin-left: 22px;}
+.to_regi:hover{text-decoration: none;}

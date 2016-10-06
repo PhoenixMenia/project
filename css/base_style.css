@@ -122,6 +122,6 @@ input{border:0;}
 #header_con p a{color: #315480;}
 #header_con  strong{display: block;height: 32px;line-height: 32px;text-align: right;color: #4f4f4f;}
 #header_con  strong span{color: #ac0000;font-weight: normal;}
-#main_body{width: 980px;min-height: 600px;height: auto!important;height: 600px;border:1px solid #c1c1c1;margin: 19px auto 0;position: relative;padding-bottom: 65px;}
+#main_body{width: 980px;border:1px solid #c1c1c1;margin: 19px auto 0;position: relative;}
 .borderred{width: 980px;height: 2px;background: #e72110;position: absolute;left: 0x;top: -2px;}
 
