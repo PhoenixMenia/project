@@ -28,12 +28,12 @@
 	<h2>欢迎登录</h2>
 	<form action="" method="post" name="login" id="login">
 		<span>用户名：</span>
-		<input type="text" />
+		<input type="text" id="username" />
 		<span>密码：</span>
-		<input type="password" />
+		<input type="password" id="password" />
 		<span>验证码：</span>
-		<p class="verification"><input type="text" /><span></span><a href="javascript:void(0);">看不清？</a></p>
-		<p class="auto_login"><input type="checkbox">自动登录<a href="#">忘记密码？</a></p>
+		<p class="verification"><input type="text" id="veristring" /><span id="confr"></span><a href="javascript:void(0);">看不清？</a><i></i></p>
+		<p class="auto_login"><input type="checkbox" id="remenber" checked="checked">自动登录<a href="#">忘记密码？</a></p>
 		<input type="button" class="login_btn" value="登录">
 		<a href="user_register.html" class="to_regi">注册</a>
 
