@@ -17,7 +17,7 @@
 
 
 #main{border:1px solid #c1c1c1;padding-bottom: 15px;}
-.process{height: 34px;background: url(../imgs/cart_bg.jpg) no-repeat left top;border-bottom: 1px solid #d8d8d8;}
+.process{height: 34px;background: url(../imgs/cart_bg2.jpg) no-repeat left top;border-bottom: 1px solid #d8d8d8;}
 #main>table{width: 976px;margin: 0 auto;border: 1px solid #e0e0e0;}
 .prod_tit{height: 34px;background: #f5f5f5;margin: 10px auto 45px!important;color: #5e5e5e;font-weight: bold;}
 .prod_tit td{height: 34px;text-align: center;}
@@ -29,11 +29,13 @@
 .action{width:80px;}
 
 .cart_infos{border-collapse: collapse;border:0;margin-bottom: 25px!important;}
+.cart_infos .template{display: none;}
+
 .cart_infos td{height: 73px;border: 1px solid #e0e0e0;text-align: center;}
 .cart_infos .prod_name{padding-left: 30px;text-align: left;}
 .prod_name img{width: 50px;height: 50px;border:1px solid #e0e0e0;float: left;margin-top: 12px;}
 .prod_name p{width: 243px;height: 73px;float: left;padding: 0 20px 0 10px;}
-.prod_name p a{display: block;height: 32px;line-height: 32px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;color: #005ea7;}
+.prod_name p a{display: block;height: 22px;padding-top: 10px;line-height: 22px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;color: #005ea7;}
 .prod_name p span{color: #8f8f8f;}
 .prod_num>*{border:1px solid #a3b7c7;}
 .prod_num span{display: inline-block;width: 12px;height: 12px;line-height: 12px;}
@@ -55,3 +57,9 @@
 
 /*-----------main与footer之间的一条分割线----------*/
 #space{width: 983px;margin: 13px auto 25px;border-top: 1px solid #e3dedf;}
+
+/*-===================用户未登陆时弹出的遮罩层=======================-*/
+#mask{width: 100%;height: 100%;position: fixed;background: rgba(0,0,0,.4);left: 0;top: 0;right: 0;bottom: 0;margin: auto;z-index: 500;display: none;}
+#innermask{width: 400px;height: 400px;border: 2px solid #A3B7C7;background: rgba(255,255,0,.5);position: fixed;left: 0;right: 0;top: 0;bottom: 0;margin: auto;z-index: 1000;color: #fff;font: bold 40px/150px "微软雅黑";text-align: center;}
+#innermask a{font: bold 30px/50px "微软雅黑";}
+#innermask a:hover{text-decoration: none;}

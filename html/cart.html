@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="header_top">
-	<p>你好,<span id="user">Phoenix</span>欢迎来到中一办公！<a href="#">[退出]</a></p>
+	<p>你好,<span id="user"></span>欢迎来到中一办公！<a href="#">[退出]</a></p>
 </div>
 <div id="header_bottom">
 	<h1><img src="../imgs/index/logo.jpg" /></h1>
@@ -40,8 +40,10 @@
 			<td class="action">操作</td>
 		</tr>
 	</table>
+	
+	<!--================商品信息============================-->
 	<table class="cart_infos">
-		<tr>
+		<tr class="template">
 			<td class="prod_name">
 				<img src="" alt="">
 				<p>
@@ -49,25 +51,29 @@
 					<span>颜色:默认</span>
 				</p>
 			</td>
-			<td class="prod_price">￥7.0元/个</td>
+			<td class="prod_price"></td>
 			<td class="prod_unit">个</td>
-			<td class="prod_num"><span>-</span><input type="text" id="num" /><span>+</span></td>
-			<td class="total">￥7.0元</td>
-			<td class="action"><a href="javascript:void(0);">收藏</a><a href="javascript:void(0);">删除</a></td>
+			<td class="prod_num"><span class="minusNum">-</span><input type="text" class="num" /><span class="addNum">+</span></td>
+			<td class="total"></td>
+			<td class="action"><a href="javascript:void(0);">收藏</a><a href="javascript:void(0);" class="remove_item">删除</a></td>
 		</tr>
+		
 		<tr class="total_info">
 			<td colspan="6">
-				<span>商品数量总计：<strong>2件</strong></span>
-				<span>商品金额总计：<strong>￥9.2元</strong></span>
+				<span>商品数量总计：<strong id="ttl_units">0件</strong></span>
+				<span>商品金额总计：<strong id="ttl_amt">￥0元</strong></span>
 			</td>
 		</tr>
 	</table>
+	
+	<!--=====================商品信息 END========================-->
+	
 	<table class="jiesuan">
 		<tr>
 			<td colspan="6">
 				<a href="../index.html" class="shopping">继续购物</a>
 				<a href="checkout.html" class="jiesuan_go">结算</a>
-				<p>商品总价(不含运费)：<span>￥9.2元</span></p>
+				<p>商品总价(不含运费)：<span id="ttl_amt_1"></span></p>
 			</td>
 		</tr>
 	</table>
@@ -77,6 +83,10 @@
 
 <div id="space"></div>
 
+<!--===================用户未登陆时弹出的遮罩层=======================-->
+<div id="mask">
+	<div id="innermask">用户未登陆<br/><a href="login.html">点击这里登录</a></div>
+</div>
 
 
 <!-- 在线交流 定位 -->

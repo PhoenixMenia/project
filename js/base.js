@@ -41,9 +41,25 @@ $(function(){
 	var currUser = $.cookie('userInfo');
 	if(currUser){
 		var userName = currUser.username;
-		$('.ht_wrap').find('strong').html(userName).parents('p').children('span').children('a:lt(2)').remove();
+		$('#logInto').text(currUser.username);
+		$('#zhuceTo').text('退出');	
 	}
+	
+	/*-------------------从cookie中获取购物车中商品的数量并显示在购物车-----------------*/
+	
+	
+	getProductsNum();
 
 
 
 });
+
+/*=================工具函数=================*/
+function getProductsNum(){
+	var products = $.cookie('products'),
+		tolNum = 0;	
+	$.each(products,function(index,element){
+		tolNum += element.num;
+	});
+	$('.cart_link span').text(tolNum);
+}

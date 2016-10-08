@@ -58,15 +58,22 @@ $(function(){
 	});
 
 	/*=========================评论====================*/
+	$.cookie.json = true;
 	var oDiv = '',
 		i = 0,
-		ran =  100000;
+		ran =  100000,
+		user_login = $.cookie('userInfo'),
+		comment_id;
+	if(user_login){
+		comment_id = user_login.username;
+	}else{
+		comment_id = 'youke'+ ran;
+	}
 	$('#launch').on('click',function(){
-		var comTxt = $('#comm_content').val().replace(/^\s+|\s+$/,''),			
-			youke_id = 'youke'+ ran,
+		var comTxt = $('#comm_content').val().replace(/^\s+|\s+$/,''),	
 			oTime = new Date(),
 			oTime1 = oTime.getFullYear() + '-' + (oTime.getMonth()+1) + '-' + oTime.getDate() + ' ' + oTime.getHours() + ':' + oTime.getMinutes() + ':' + oTime.getSeconds(),
-			oDiv = '<div class="pinglun"><strong>'+youke_id+'</strong><p>'+comTxt+'</p><p class="shijian">' + oTime1 + '</p></div>';
+			oDiv = '<div class="pinglun"><strong>'+comment_id+'</strong><p>'+comTxt+'</p><p class="shijian">' + oTime1 + '</p></div>';
 		if(!comTxt){
 			return;
 		}
@@ -126,13 +133,18 @@ $(function(){
 
 
 	/*=========================切换选择的商品版本====================*/
-	var coffe_price = ['￥9.90/盒','￥9.90/盒','￥36.00/盒','￥72.00/罐','￥78.00/瓶','￥34.80/瓶','￥98.00/罐',];
+	var coffe_price = ['￥9.90/盒','￥9.90/盒','￥36.00/盒','￥72.00/罐','￥78.00/瓶','￥34.80/瓶','￥98.00/罐',],
+		prod_huohao = ['15501000','15501001','15501002','15501003','15501004','15501005','15501006'],
+		prod_name = ['雀巢/Nestle 1+2原味即溶咖啡饮品 速溶咖啡42+6原味 48条装 720g/盒','太古 优级 方糖 餐饮装 454g','雀巢（Nestle）咖啡1+2特浓30条390g','雀巢咖啡 1+2 原味 1200g 罐装 速溶咖啡','雀巢（Nestle）咖啡醇品速溶咖啡 200g','Nestle雀巢咖啡伴侣（植脂末）400g','Nestle雀巢咖啡醇品黑咖啡罐装 500g 可冲277杯'];
 
 	$('.version').on('click','span',function(){
 		var _index = $(this).index();
 		$(this).addClass('want').siblings('span').removeClass('want');
 		//切换商品价格
 		$('.price').find('span').text(coffe_price[_index]);
+		$('.prod_id').text(prod_huohao[_index]);
+		$('.prodname').text(prod_name[_index]);
+		$('#num').val('1');
 	});
 
 	/*=========================修改商品数量====================*/
@@ -149,13 +161,59 @@ $(function(){
 
 	$('.add').on('click',function(){
 		var num = parseInt($('#num').val());
-		console.log(num);
 		num++;
 		$('#num').val(num);
 	});
 
-	//待完善 cookie
+	/*=========================添加到购物车====================*/
+	$.cookie.json = true;
+	$('#putIntoCart').on('click',function(){
+		var prod_id = $('.prod_id').text(),
+			prod_name = $('.prodname').text(),
+			prod_imgSrc = $('.pages .xuanzhong').get(0).src.replace('file:///E:/project/','../'),
+			prod_color = "默认",
+			prod_price = $('.price span').text();
+			prod_num = parseInt($('#num').val());
+		var product = {
+			'id' : prod_id,
+			'name' : prod_name,
+			'imgSrc' : prod_imgSrc,
+			'color' : prod_color,
+			'price' : prod_price,
+			'num' : prod_num
+		};
+		var products = $.cookie('products');
+		if(!products){
+			products = [];
+		}
+		
+		var $index = getProductIndex(product.id,products);
+		if($index !== -1){
+			products[$index].num += product.num;
+		}else{
+			products.push(product);
+		}					
+		$.cookie('products',products,{'expires':7});
+		console.log(products);
+		
+		//动态更新购物车的数量,并显示在页面上
+		getProductsNum();
+	});
 
 
 
 });
+
+
+
+/*------------------辅助函数-----------------------*/
+function getProductIndex(id,products){
+	var prodIndex = -1;
+	for(var i=0, len=products.length; i<len; i++){
+		if(id === products[i].id){
+			prodIndex = i;
+			break;
+		}
+	}
+	return prodIndex;
+}
