@@ -70,15 +70,41 @@
 			</p>
 		</div>
 		<div class="deliverway">
-			<p><span>配送方式</span><span>送货时间</span></p>
-			<p>
+			<p class="border_bottom"><strong style="width: 498px;display: inline-block;">配送方式</strong><strong>送货时间</strong></p>
+			<p class="border_bottom">
 				<input type="radio" name="peisong" id="zhongyi"/><label for="zhongyi">中一配送（限北京市）</label>
 				<input type="radio" name="peisong" id="ziti"/><label for="ziti">上门自提 </label>
 				<input type="radio" name="peisong" id="kuaidi"/><label for="kuaidi">快递（不包括纸类、家具类）</label>
+				<select name="shijian" id="shijian">
+					<option value="1">只工作日送货</option>
+					<option value="1">工作日、双休日及假日均可送货</option>
+				</select>
 			</p>
-			<p></p>
+			<p class="border_bottom">是否送货前确认<input type="radio" name="isNeedConfirm"/>是<input type="radio" name="isNeedConfirm"/>否</p>
 		</div>
-		<div class="invoice"></div>
+		<div class="invoice">
+			<p><strong>发票信息</strong></p>
+			<p><span>*</span>发票类型<input type="radio" name="invoice" value="-1"/>不开发票
+			<input type="radio" name="invoice" value="1"/>普通发票
+			<input type="radio" name="invoice" value="2"/>增值税发票</p>
+			<div class="fapiao1">
+				<p><span>*</span>填写抬头<input type="text" />保存、修改发票抬头请在我的中一、帐户信息中完成</p>
+				<p style="padding-left: 42px;">您填写的内容都将被系统自动打印到发票上，所以请不要填写与发票无关的信息；</p>
+				<p><span>*</span>发票内容<input type="radio" name="invoice_con" value="1"/>办公用品<input type="radio" name="invoice_con" value="2"/>日用品<input type="radio" name="invoice_con" value="3"/>耗材<input type="radio" name="invoice_con" value="4"/>电子产品<input type="radio" name="invoice_con" value="5"/>明细</p>
+			</div>
+			<div class="fapiao2">
+				<p><span>*</span>发票内容<input type="radio" name="invoice_con" value="1"/>办公用品<input type="radio" name="invoice_con" value="2"/>日用品<input type="radio" name="invoice_con" value="3"/>耗材<input type="radio" name="invoice_con" value="4"/>电子产品<input type="radio" name="invoice_con" value="5"/>明细</p>
+				<p><span>*</span>单位名称:<input type="text"></p>
+				<p><span>*</span>注册地址:<input type="text"></p>
+				<p><span>*</span>纳税人识别号:<input type="text"></p>
+				<p><span>*</span>注册电话:<input type="text"></p>
+				<p><span>*</span>开户银行:<input type="text"></p>
+				<p><span>*</span>银行账号:<input type="text"></p>
+				<p style="padding: 0 15px 0 42px;line-height: 16px;color: #f00;margin-top: 15px;">首次开具增值税专用发票，请您在帐户信息中上传加盖公章的营业执照副本、税务登记证副本及银行开户许可证扫描件，并在增票认证中填写纳税人识别号等开票信息，收到您的开票资料后，我们会尽快审核，只有审核通过的客户才可开增值税专用发票。</p>
+				<p style="padding: 0 3px 0 42px;line-height: 16px;color: #f00;">资质上传及审核结果查询地址：“我的中一 ->账户信息 ->增票认证”。</p>
+
+			</div>
+		</div>
 		<div class="comments"></div>
 	</form>
 	

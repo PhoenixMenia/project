@@ -2,7 +2,7 @@
 .border_bottom{border-bottom: 1px dashed #b3b3b3;}
 strong{color: #e51800;}
 
-.checkout{width: 985px;height: 500px;background: yellow;margin: 0 auto;padding-bottom: 8px;}
+.checkout{width: 985px;background: yellow;margin: 0 auto;padding-bottom: 8px;}
 .checkout>div{padding: 0 18px;}
 .receiver_info{position: relative;}
 .first_show{height: 54px;padding-top: 19px;}
@@ -19,6 +19,20 @@ strong{color: #e51800;}
 .last_show input[type=text]{width: 171px;height: 17px;border: 1px solid #a9a9a9;color: #000;}
 .last_show select{height: 17px;font-size: 12px;color: #000;padding-right: 15px;}
 
-.paymethod{background: blue;margin-top: 21px;}
+.paymethod{margin-top: 21px;}
 .paymethod p{height: 46px;line-height: 46px;}
 .paymethod input[type=radio]{margin: 0 4px 0 34px;position: relative;top: 2px;}
+
+.deliverway{padding-top: 10px!important;}
+.deliverway p{height: 45px;line-height: 45px;}
+.deliverway p input[type=radio]{margin: 0 3px 0 35px;position: relative;top: 2px;}
+.deliverway p select{font-size: 12px;color: #000;}
+
+.invoice{padding-top: 20px!important;}
+.invoice p{line-height: 37px;position: relative;}
+.invoice p span{margin: 0 3px 0 42px;}
+.invoice p input[type=radio]{margin: 0 3px 0 30px;position: relative;top: 2px;}
+.invoice .fapiao1 input[type=text]{width: 200px;height: 23px;margin: 0 8px 0 30px;border: 1px solid #ddd;}
+.invoice .fapiao2 input[type=text]{width: 200px;height: 23px;position: absolute;left: 150px;top: 0;bottom: 0;margin: auto 0;border: 1px solid #ddd;}
+
+
