@@ -34,4 +34,16 @@ $(function(){
 	$('#back_to_top').on('click',function(){
 		$(window).scrollTop(0);
 	});
+
+
+	/*-------------------从cookie中获取用户名和密码自动登录-----------------*/
+	$.cookie.json = true;
+	var currUser = $.cookie('userInfo');
+	if(currUser){
+		var userName = currUser.username;
+		$('.ht_wrap').find('strong').html(userName).parents('p').children('span').children('a:lt(2)').remove();
+	}
+
+
+
 });

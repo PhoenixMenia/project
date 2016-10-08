@@ -43,10 +43,21 @@ $(function(){
 		/*-------判断验证码是否正确------*/
 		if(!isTrue){
 			return;
-		}else{
-			console.log('验证码正确');
-			//待完善。。。。。提交登录
 		}
+		//登录
+		$.ajax({
+			'type':'get',
+			'url':'../mock/login.json',
+			'data':{'username':username,'password':password},
+			'dataType':'json',
+			'success':function(data){
+				if(data.status == 2000){
+					alert('登录成功');
+					window.location.href = '../index.html';
+				}
+			}
+
+		});
 	
 	});
 
