@@ -170,14 +170,24 @@
 	<div id="change_inner">
 		<h3>商品订单</h3>
 		<h3 class="bg">收货人信息</h3>
-		<p><span>收货人姓名</span><input type="text" /></p>
-		<p><span>收货人姓名</span><input type="text" /></p>
-		<p><span>收货人姓名</span><input type="text" /></p>
-		<p><span>收货人姓名</span><input type="text" /></p>
-		<p><span>收货人姓名</span><input type="text" /></p>
-		<p><span>收货人姓名</span><input type="text" /></p>
-		<p><span>收货人姓名</span><input type="text" /></p>
-		<button>修改</button>
+		<p><span>收货人姓名:</span><input type="text" /></p>
+		<p><span>电话:</span><input type="text" /></p>
+		<p><span>邮编:</span><input type="text" /></p>
+		<p>
+			<span>地址:</span>
+			<select><option value="-1">请选择</option></select>
+			<select><option value="-1">请选择</option></select>
+			<select><option value="-1">请选择</option></select>
+		</p>
+		<p><span>详细地址:</span><input type="text" /></p>
+		<p><span>邮箱:</span><input type="text" /></p>
+		<p>
+			<span>默认地址:</span>
+			是<input type="radio" name="moren" checked="checked"/>
+			否<input type="radio" name="moren"/>
+		</p>
+		<button id="save_change">修改</button>
+		<a href="javascript:void(0);" id="close">×</a>
 	</div>
 </div>
 

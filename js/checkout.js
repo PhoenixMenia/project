@@ -95,6 +95,15 @@ $(function(){
 	});
 	
 	var onOff = true;
+	var scroll = true;
+	if(!scroll){
+		document.documentElement.style.overflow = 'hidden';
+		document.body.style.overflow = 'hidden';
+	}else{
+		document.documentElement.style.overflow = 'auto';
+		document.body.style.overflow = 'auto';
+	}	
+	
 	$('.save').on('click',function(){
 		/*var addresses = $.cookie('addresses');
 		if(!addresses){
@@ -106,6 +115,7 @@ $(function(){
 				city = $('#city').val(),
 				county = $('#county').val(),
 				street = $('#street').val(),
+				zip_code = $('#zip').val(),
 				phone = $('#phone').val(),
 				emial = $('#email').val().replace(/^\s+|\s+$/,''),
 				html = '',
@@ -140,10 +150,26 @@ $(function(){
 				var _this = this;
 				$(_this).parent('p').remove();
 			}).next().on('click',function(){
-				console.log('sdfsdaf');
+				var $ind = $(this).parent('.new_address');
+				$('#change_inner input').eq(0).val(receiver_name)
+				.parent('p').next('p').children('input').val(phone)
+				.parent('p').next('p').children('input').val(zip_code)
+				.parent('p').next('p').next('p').children('input').val(street)
+				.parent('p').next('p').children('input').val(emial);
+				scroll = false;				
+				$('#change_address').show().find('#save_change').on('click',function(){
+					console.log(1213223);
+					$ind.children().eq(1).text($('#change_inner :text').eq(0).val());
+					$ind.children().eq(5).text($('#change_inner :text').eq(3).val());
+					$('#email').val($('#change_inner :text').eq(4).val());
+					$('#change_address').hide();
+					scroll = true;
+				}).end().find('#close').on('click',function(){
+					$('#change_address').hide();
+					scroll = true;
+				});
 			});
-		}
-		
+		}	
 		$('.last_show').hide();
 		onOff = false;
 		var _height = $('.second_show').outerHeight();
@@ -177,6 +203,7 @@ $(function(){
 	});
 	
 	/*=========选择发票========*/
+	var on_record = 0;
 	$('.invoice>p').eq(1).on('click',':radio',function(){
 		var index = $(this).index();
 		var $div = $('.invoice>div');
@@ -184,8 +211,17 @@ $(function(){
 		if(index === 1){
 			$div.hide();
 		}else{
+			if(index === 3){
+				var ttl = parseFloat($('#ttl_amt_1').text().replace(/￥|[\u2E80-\u9FFF]/g,''));
+				if(ttl <= 200){
+					alert('产品总金额大于200才能开增值税发票');
+					$('.invoice>p').eq(on_record).prop('checked',false);
+					return;
+				}
+			}
 			$div.eq(index-2).show().siblings('div').hide();
 		}
+		on_record = index;
 	});
 	
 	/*跨域获取省份及市区信息*/
