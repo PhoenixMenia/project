@@ -49,17 +49,19 @@ $(function(){
 	
 	
 	getProductsNum();
+	
+	
+	/*=================工具函数=================*/
+	function getProductsNum(){
+		var products = $.cookie('products'),
+			tolNum = 0;	
+		$.each(products,function(index,element){
+			tolNum += element.num;
+		});
+		$('.cart_link span').text(tolNum);
+}
 
 
 
 });
 
-/*=================工具函数=================*/
-function getProductsNum(){
-	var products = $.cookie('products'),
-		tolNum = 0;	
-	$.each(products,function(index,element){
-		tolNum += element.num;
-	});
-	$('.cart_link span').text(tolNum);
-}
