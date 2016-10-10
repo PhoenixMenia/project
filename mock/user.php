@@ -54,20 +54,21 @@
 		if($type == "login"){
 			$name = $_POST["username"];
 			$pwd = $_POST["pwd"];
+			$flag = "";
 			
 			$json = file_get_contents("register.json");
 			$arr_json = json_decode($json,true);
 			
 			for($i=0;$i<count($arr_json);$i++){
 				if($arr_json[$i]["name"] == $name && $arr_json[$i]["pwd"] == $pwd){
-					
+					$flag = true;
+					break;
 				}
-			}
+			}		
+			/*$json_encode = json_encode($arr_json);
+			file_put_contents("register.json",$json_encode);*/
 			
-			$json_encode = json_encode($arr_json);
-			file_put_contents("register.json",json_encode);
-			
-			echo json_encode($flog);
+			echo $flag;
 		}
 		
 	}

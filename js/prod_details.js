@@ -193,12 +193,22 @@ $(function(){
 		}else{
 			products.push(product);
 		}					
-		$.cookie('products',products,{'expires':7});
-		console.log(products);
+		$.cookie('products',products,{'expires':7,'path':'/'});
 		
 		//动态更新购物车的数量,并显示在页面上
 		getProductsNum();
 	});
+	
+	
+	/*=================工具函数=================*/
+	function getProductsNum(){
+		var products = $.cookie('products'),
+			tolNum = 0;	
+		$.each(products,function(index,element){
+			tolNum += element.num;
+		});
+		$('.cart_link span').text(tolNum);
+	}
 
 
 

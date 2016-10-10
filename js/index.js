@@ -81,52 +81,6 @@ $(function(){
 	});
 
 	
-
-	/*===========side_img切换=============================*/
-
-	/*var $side_imgs = $('.side_img img'),
-		imgHeight = $side_imgs.eq(0).height();
-		len = $side_imgs.length,
-		nextIndex = 2,
-		timer = null,
-		$first = $side_imgs.eq(0).clone(true),
-		$last = $side_imgs.eq(len-1).clone(true);
-
-	$first.appendTo('.img_box');
-	$last.prependTo('.img_box');
-	len += 2;
-	$('.img_box').height(len*imgHeight);
-	$('.img_box').css('top',-imgHeight);
-
-
-	timer = setInterval(move,1000);
-
-	function move(){
-		var _top = -nextIndex * imgHeight;
-		$('.img_box').animate({'top':_top},200);
-		nextIndex ++;
-		if (nextIndex >= len) {
-			nextIndex = 2;
-			$('.img_box').css('top',-imgHeight);
-		}
-	}
-
-	$('.side_img').hover(function(){
-		clearInterval(timer);
-	},function(){
-		timer = setInterval(move,1000);
-	}).on('click','#next',function(){
-		move();
-	}).on('click','#prev',function(){
-		nextIndex-=2;
-		move();
-	});*/
-
-
-	
-
-
-
 	
 
 	

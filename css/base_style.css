@@ -49,7 +49,7 @@ input{border:0;}
 .side_img{width: 162px;height: 34px;margin-top:4px;float: left;position: relative;overflow: hidden;}
 .img_box{width: 162px;position: absolute;left: 0;top: 0;}
 .side_img img{width: 134px;height: 34px;display: block;}
-.side_img span{display: inline-block;width: 6px;height: 3px;position: absolute;right: 6px;background: url(../imgs/index/prev.jpg);}
+.side_img span{display: inline-block;width: 10px;height: 10px;position: absolute;right: 6px;background: url(../imgs/index/prev.jpg) no-repeat;}
 .side_img span.prev{top: 12px;}
 .side_img span.next{top: 25px;background-image: url(../imgs/index/next.jpg);}
 

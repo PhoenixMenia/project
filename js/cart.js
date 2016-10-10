@@ -31,7 +31,7 @@ $(function(){
 		var _prod = $ele.data('product'),
 			_subttl = _prod.price.replace(/￥|\/|[\u2E80-\u9FFF]/g,'') * num;
 		_prod.num = num;
-		$.cookie('products',products,{'expires':7});
+		$.cookie('products',products,{'expires':7,'path':'/'});
 		$ele.find('.total').text('￥' + _subttl.toFixed(2) + '元');	
 	}
 	
@@ -76,7 +76,7 @@ $(function(){
 		var _prod = $(this).parents('.prod_item').data('product'),
 			_index = getProductIndex(_prod.id,products);
 		products.splice(_index,1);
-		$.cookie('products',products,{'expires':7});
+		$.cookie('products',products,{'expires':7,'path':'/'});
 		$(this).parents('.prod_item').remove();
 		
 		get_ttl_amount();

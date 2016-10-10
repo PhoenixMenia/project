@@ -89,10 +89,10 @@ $(function(){
 			$(this).siblings('.infoss').text('密码右8-18位任意字符组成');
 			passwordOk = false;
 			return;
-		}else{
-			$(this).siblings('.infoss').text('密码可以使用');
-			passwordOk = true;
-		}					
+		}
+		$(this).siblings('.infoss').text('密码可以使用');
+		passwordOk = true;
+					
 	});
 	
 	//密码确认
@@ -147,73 +147,26 @@ $(function(){
 	
 	/*---------------提交注册-----------------*/
 	$('#regi button').on('click',function(){
-		console.log(nameOk,emailOk,pwd_confirmOk);
 		if(nameOk && emailOk && pwd_confirmOk){			
 			$.ajax({
 				'type':"post",
 				'url':"../mock/user.php",
 				'async':true,
-				'data':{"type":"insert","username":regi_name,"password":regi_pwd,'email':regi_emial},
+				'data':{"type":"insert",
+						"username":regi_name,
+						"password":regi_pwd,
+						'email':regi_emial},
 				'success':function(data){
-					alert(data);
-					window.location.href = '../html/login.html';
+					console.log(data);
+					a();
 				}
-			});
+			});		
 		}
 	});
 	
-	//验证用户名是否存在
-	/*function checkUsername(name){
-		$.ajax({
-			'type':'post',
-			'url':'../mock/user.php',
-			'async':true,
-			'data':{'type':'checkusername','username':name},
-			'success':function(data){
-				data = JSON.parse(data);
-				if(data){
-					$('.user_name').siblings('.infoss').text('用户名已存在');
-				}else{
-					$('.user_name').siblings('.infoss').text('用户名可以使用');
-				}
-			}
-		});
-	}*/
-	
-	//验证邮箱是否已被注册
-	/*function checkEmail(email){
-		$.ajax({
-			'type':'post',
-			'url':'../mock/user.php',
-			'async':true,
-			'data':{'type':'checkemail','email':email},
-			'success':function(data){
-				data = JSON.parse(data);
-				if(data){
-					$('.user_email').siblings('.infoss').text('邮箱已注册，请使用新的邮箱');
-				}else{
-					$('.user_email').siblings('.infoss').text('邮箱可以使用');
-				}
-			}
-		});
-	}*/
-	
-	//注册新用户
-	/*function addNewUser(name,pwd,email){
-		$.ajax({
-			'type':"post",
-			'url':"../mock/user.php",
-			'async':true,
-			'data':{"type":"insert","username":name,"password":pwd,'email':email},
-			'success':function(data){
-				alert(data);
-			}
-		});
-	}*/
-	
-	
-	
-
+	function a(){
+		window.location.href = "../html/login.html";
+	}
 
 
 });

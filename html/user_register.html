@@ -28,7 +28,7 @@
 	<div class="qiehuan"><span style="border-right: 0;" class="clicked">个人用户注册</span><span>企业用户注册</span></div>
 	<div class="infos">
 		<p class="newreg"><span></span><strong class="red">新用户注册</strong></p>
-		<form action="" name="register" method="post" id="userreg">
+		<div id="userreg">
 			<p><span>用户名</span><input type="text" class="user_name" /><strong>*</strong><strong class="infoss"></strong></p>
 			<p><span>email</span><input type="text" class="user_email" /><strong>*</strong><strong class="infoss"></strong></p>
 			<p><span></span><strong class="normal">请正确填写您的常用电子邮件地址，作为密码取回之用。</strong></p>
@@ -46,7 +46,7 @@
 			<p><span>手机</span><input type="text" class="mobile" /><strong class="infoss"></strong></p>
 			<p>
 				<span>密码提示问题</span>
-				<select name="question" id="question">
+				<select id="question">
 					<option value="-1">无安全问题</option>
 					<option value="1">母亲的名字</option>
 					<option value="2">爷爷的名字</option>
@@ -61,7 +61,7 @@
 			<p><span>密码问题答案</span><input type="text" class="anwser" /><strong class="red">*</strong><strong class="infoss"></strong></p>
 			<p id="check" ><span></span><input type="checkbox" /><span>&nbsp;我已看过并接受<span class="xieyi">用户协议</span></span></p>
 			<p id="regi" ><span></span><button disabled="disabled" class="disbld">立即注册</button></p>
-		</form>
+		</div>
 		<a href="login.html">我已有账号，我要登录</a>
 		<a href="#">您忘记密码了吗？</a>
 	</div>
