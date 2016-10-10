@@ -1,4 +1,23 @@
-{
-	"status":2000,
-	"message":"用户名未注册,可以使用"
-}
+[
+	{
+		"name": "admin",
+		"pwd": "1234",
+		"email":"1234567@qq.com"
+	}, {
+		"name": "aaa",
+		"pwd": "3333",
+		"email":"xfm123@qq.com"
+	}, {
+		"name": "q",
+		"pwd": "1112",
+		"email":"764491014@163.com"
+	}, {
+		"name": "111",
+		"pwd": "qqq",
+		"email":"molala123@yahoo.com"
+	}, {
+		"name": "xue20070612",
+		"pwd": "qqq",
+		"email":"lalala543@qq.com"
+	}
+]

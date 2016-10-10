@@ -13,24 +13,27 @@ $(function(){
 		regi_name;
 	$('.user_name').on('blur',function(){
 		regi_name = $(this).val().replace(/^\s+|\s+$/,'');
-		//验证用户名的模式是否匹配(6-16位字母，数字z组成)
+		//验证用户名的模式是否匹配(6-16位字母，数字组成)
 		var _reg = /^[a-zA-Z0-9]{6,16}$/;
 		if(!regi_name.match(_reg)){
 			$(this).siblings('.infoss').text('用户名不能有特殊符号，长度为6-16位');
+			nameOk = false;
 			return;
 		}
-		//提交验证用户名是否可以使用
+		//ajax提交验证用户名是否可以使用
 		$.ajax({
-			'type':'get',
-			'url':'../mock/register.json',
-			'data':{'username':regi_name},
-			'dataType':'json',
+			'type':'post',
+			'url':'../mock/user.php',
+			'async':true,
+			'data':{'type':'checkusername','username':regi_name},
 			'success':function(data){
-				$('.user_name').siblings('.infoss').text(data.message);
-				if(data.status === 2000){
-					nameOk = true;
-				}else{
+				data = JSON.parse(data);
+				if(data){
+					$('.user_name').siblings('.infoss').text('用户名已存在');
 					nameOk = false;
+				}else{
+					$('.user_name').siblings('.infoss').text('用户名可以使用');
+					nameOk = true;
 				}
 			}
 		});
@@ -50,25 +53,28 @@ $(function(){
 		//验证邮箱的格式是否正确
 		if(!regi_emial.match(/^[a-z\d]+(\.[a-z\d]+)*@([\da-z](-[\da-z])?)+(\.{1,2}[a-z]+)+$/)){
 			$(this).siblings('.infoss').text('邮箱格式不正确，请填写正确的格式');
+			emailOk = false;
 			return;
 		}
-		//提交验证邮箱是否已注册
+		//ajax提交验证邮箱是否已注册
 		$.ajax({
-			'type':'get',
-			'url':'../mock/email.json',
-			'data':{'email':regi_emial},
-			'dataType':'json',
+			'type':'post',
+			'url':'../mock/user.php',
+			'async':true,
+			'data':{'type':'checkemail','email':regi_emial},
 			'success':function(data){
-				$('.user_email').siblings('.infoss').text(data.message);
-				if(data.status === 2000){
-					emailOk = true;
-				}else{
+				data = JSON.parse(data);
+				if(data){
+					$('.user_email').siblings('.infoss').text('邮箱已注册，请使用新的邮箱');
 					emailOk = false;
+				}else{
+					$('.user_email').siblings('.infoss').text('邮箱可以使用');
+					emailOk = true;
 				}
 			}
 		});
-
 	});
+	
 	
 	//验证密码
 	var passwordOk,
@@ -132,7 +138,6 @@ $(function(){
 		
 	function submit_regi(){
 		var check_status = $('#check :checkbox').prop('checked');
-		console.log(check_status);
 		if(check_status){
 			$('#regi button').removeClass('disbld').prop('disabled',false);
 		}else{
@@ -140,23 +145,71 @@ $(function(){
 		}
 	}
 	
-	/*---------------提交表单-----------------*/
+	/*---------------提交注册-----------------*/
 	$('#regi button').on('click',function(){
-		if(nameOk && emailOk && pwd_confirmOk){
+		console.log(nameOk,emailOk,pwd_confirmOk);
+		if(nameOk && emailOk && pwd_confirmOk){			
 			$.ajax({
-				'type':'post',
-				'url' : '../mock/register_submit.json',
-				'data' : {'username':regi_name,'email':regi_emial,'password':regi_pwd},
-				'dataType' : 'json',
-				'success' : function(data){
-					if(data.status === 2000){
-						alert('注册成功');
-						window.location.href = '../html/login.html';
-					}
+				'type':"post",
+				'url':"../mock/user.php",
+				'async':true,
+				'data':{"type":"insert","username":regi_name,"password":regi_pwd,'email':regi_emial},
+				'success':function(data){
+					alert(data);
+					window.location.href = '../html/login.html';
 				}
 			});
 		}
 	});
+	
+	//验证用户名是否存在
+	/*function checkUsername(name){
+		$.ajax({
+			'type':'post',
+			'url':'../mock/user.php',
+			'async':true,
+			'data':{'type':'checkusername','username':name},
+			'success':function(data){
+				data = JSON.parse(data);
+				if(data){
+					$('.user_name').siblings('.infoss').text('用户名已存在');
+				}else{
+					$('.user_name').siblings('.infoss').text('用户名可以使用');
+				}
+			}
+		});
+	}*/
+	
+	//验证邮箱是否已被注册
+	/*function checkEmail(email){
+		$.ajax({
+			'type':'post',
+			'url':'../mock/user.php',
+			'async':true,
+			'data':{'type':'checkemail','email':email},
+			'success':function(data){
+				data = JSON.parse(data);
+				if(data){
+					$('.user_email').siblings('.infoss').text('邮箱已注册，请使用新的邮箱');
+				}else{
+					$('.user_email').siblings('.infoss').text('邮箱可以使用');
+				}
+			}
+		});
+	}*/
+	
+	//注册新用户
+	/*function addNewUser(name,pwd,email){
+		$.ajax({
+			'type':"post",
+			'url':"../mock/user.php",
+			'async':true,
+			'data':{"type":"insert","username":name,"password":pwd,'email':email},
+			'success':function(data){
+				alert(data);
+			}
+		});
+	}*/
 	
 	
 	
